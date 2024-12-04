@@ -1,11 +1,17 @@
 # ML_journey
-This will be my own journey of me learning being better at ML 
+This will be my own journey of me learning being better at ML. This is meant to encourage me to learn and build more often.
 
 * The [`C`](./C) folder in this directory is for the [cc4e.com](https://cc4e.com) class. More coming soon.
 
 * The [`Karapathy`](./Karapathy) folder is for the Karapathy learning videos.
 
 * And I am doing my experiments in the [`Random Code`](./random_code/) folder I will try to add more explanations once I have them. venv will probably be missing for most of them 😊.
+
+## Things I'm working on right now
+- [FinMAs (my graduation project)](https://github.com/KevorkSulahian/agentic-llm-for-better-results)
+- [Learning C cc4e](https://www.cc4e.com/)
+- [HF smol course](https://github.com/huggingface/smol-course)
+- [learnpytorch.io mostly following and not much else](https://www.learnpytorch.io/)
 
 
 ## Good reads
