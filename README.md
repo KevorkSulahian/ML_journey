@@ -12,23 +12,77 @@ This will be my own journey of me learning being better at ML
 - [Reward Hacking](https://lilianweng.github.io/posts/2024-11-28-reward-hacking/) what could go wrong in RLHF
 
 
-## To read in the future
+## To do in the future
 
 #### Blogs
+##### Blog writers
 - [ML Blogs](https://cneuralnets.netlify.app/mlblogs)
+- [hackerllama](https://osanseviero.github.io/hackerllama/blog/)
+
+##### Just a blog
 - [Understanding Multimodal LLMs](https://magazine.sebastianraschka.com/p/understanding-multimodal-llms)
 - [Physics of Language Models](https://antaripasaha.notion.site/Physics-of-Language-Models-understanding-hidden-reasoning-process-1045314a563980c68566e4ecc1e32ef6)
 - [Policy Gradient](https://lilianweng.github.io/posts/2018-04-08-policy-gradient/)
+- [Flash Attention](https://benjaminwarner.dev/2023/08/16/flash-attention-compile)
+- [LLM visualized](https://bbycroft.net/llm)
+- [LLM training](https://rentry.org/llm-training)
+- [hitchhiker_guide](https://osanseviero.github.io/hackerllama/blog/posts/hitchhiker_guide/)
+- [What We’ve Learned From A Year of Building with LLMs](https://applied-llms.org/)
+- [LLM Research Insights:](https://magazine.sebastianraschka.com/p/llm-research-insights-instruction?)
+- [FineWeb: decanting the web for the finest text data at scale](https://huggingface.co/spaces/HuggingFaceFW/blogpost-fineweb-v1)
+- [torch.compile, the missing manual](https://docs.google.com/document/d/1y5CRfMLdwEoF1nTk9q8qEu1mgMUuUtvhklPKJ2emLU8/edit?tab=t.0#heading=h.66t0x3z84jio)
+- [Build a GENAI platform](https://huyenchip.com/2024/07/25/genai-platform.html)
+- [New LLM Pre-training and Post-training Paradigms](https://magazine.sebastianraschka.com/p/new-llm-pre-training-and-post-training)
+- [Document your grind](https://lelouch.dev/blog/august-2024/documenting-your-grind/)
+- [A minimal Intro to Quantization](https://osanseviero.github.io/hackerllama/blog/posts/minimal-quantize-intro/)
 
 #### Books and math
 - [Mathematics for Machine Learning](https://mml-book.github.io/)
 - [Applied Linear Algebra Notes](https://docs.google.com/document/d/1uvAbEhbgS_M-uDMTzmOWRlYxqCkogKRXdbKYYT98ooc/edit?tab=t.0#heading=h.lxp3eg9lr5k9)
 - [MAT3341 Applied Linear Algebra](https://alistairsavage.ca/mat3341/notes/MAT3341-Applied_Linear_Algebra.pdf)
 - [Introduction to Linear Algebra](https://pabloinsente.github.io/intro-linear-algebra)
+- [Financial analysis book](https://github.com/realmistic/PythonInvest-basic-fin-analysis)
+- [Graphic data science](https://geographicdata.science/book/intro.html)
+
 
 #### C and cuda
 - [Stanford CS Library](http://cslibrary.stanford.edu/101/)
 - [Beej's Guide to C Programming](https://beej.us/guide/bgc/)
+- [How to Optimize a CUDA Matmul Kernel](https://siboehm.com/articles/22/CUDA-MMM)
+- [From Scratch series](https://biraj21.github.io/blogs/from-scratch.html)
+#### Papers
+- [VLM's are blind](https://vlmsareblind.github.io/)
+- [Mamba the hard way](https://srush.github.io/annotated-mamba/hard.html?utm_source=substack&utm_medium=email)
+- [LORA](https://arxiv.org/abs/2106.09685)
+- [1-bit LLM](https://arxiv.org/abs/2402.17764)
+- [XLSTM](https://arxiv.org/abs/2405.04517)
+- [Scalable MatMul-free Language Modeling](https://arxiv.org/abs/2406.02528)
+- [Trading GPT](https://arxiv.org/pdf/2309.03736)
+
+#### Codes to implelement
+- [Karapathy mibpe](https://github.com/karpathy/minbpe)
+- [Cohere agents](https://github.com/cohere-ai/notebooks/tree/main?tab=readme-ov-file#agents)
+- [Building A GPT-Style LLM Classifier From Scratch By Sebastian](https://magazine.sebastianraschka.com/p/building-a-gpt-style-llm-classifier?)
+- [lora from scratch by Sebastian](https://lightning.ai/lightning-ai/studios/code-lora-from-scratch?view=public&section=featured)
+- [try comet in case for job](https://lightning.ai/comet/studios/comet-lightning-quickstart?section=featured&view=public&query=comet)
+- [llama from scratch](https://github.com/naklecha/llama3-from-scratch)
+- [lightning snippets](https://lightning.ai/studios?section=featured)
+- [DPSY](https://lightning.ai/lightning-ai/studios/dspy-programming-with-foundation-models?view=public&section=all)
+
+#### YouTube videos and channels
+##### Channel
+-[Code in a jiffy](https://www.youtube.com/@codeinajiffy)
+##### Video
+
+#### Courses
+##### High importance
+
+##### else
+- [HF Deep RL](https://huggingface.co/learn/deep-rl-course/unit0/introduction)
+
+- [NLP Course](https://www.nlpdemystified.org/course)
+
+#### IRL books 
 
 ## my articles
 ### Note: some of the articles are basically implmentation of tutorials so not fully mine
@@ -40,3 +94,15 @@ This will be my own journey of me learning being better at ML
 
 
 
+## Maybe things
+
+### Courses
+- [parallel computing](https://gfxcourses.stanford.edu/cs149/fall24/courseinfo)
+- [harvard research class](https://docs.google.com/document/d/1uvAbEhbgS_M-uDMTzmOWRlYxqCkogKRXdbKYYT98ooc/edit?pli=1&tab=t.0#heading=h.o3hogvl0ayc1)
+- [ML Engineering](https://github.com/stas00/ml-engineering)
+- [Financial RL](https://github.com/AI4Finance-Foundation/FinRL/tree/c34190153d84c376dcacaf18b57097a6272b0286)
+- [Open AI RL](https://spinningup.openai.com/en/latest/)
+
+### Code
+- [video tracking](https://github.com/roboflow/supervision)
+- [dspy rag](https://www.kaggle.com/code/iamleonie/rag-with-gemma-on-hf-and-weaviate-in-dspy)
