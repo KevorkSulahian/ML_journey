@@ -14,6 +14,10 @@ This will be my own journey of me learning being better at ML. This is meant to 
 - [learnpytorch.io mostly following and not much else](https://www.learnpytorch.io/)
 
 
+### Self improvment guides
+- [write better code](https://marvelousmlops.substack.com/p/bridging-the-gap-converting-data)
+
+
 ## Good reads
 - [Reward Hacking](https://lilianweng.github.io/posts/2024-11-28-reward-hacking/) what could go wrong in RLHF
 
@@ -41,6 +45,7 @@ This will be my own journey of me learning being better at ML. This is meant to 
 - [New LLM Pre-training and Post-training Paradigms](https://magazine.sebastianraschka.com/p/new-llm-pre-training-and-post-training)
 - [Document your grind](https://lelouch.dev/blog/august-2024/documenting-your-grind/)
 - [A minimal Intro to Quantization](https://osanseviero.github.io/hackerllama/blog/posts/minimal-quantize-intro/)
+-[High Quality Human Data][https://lilianweng.github.io/posts/2024-02-05-human-data-quality/]
 
 #### Books and math
 - [Mathematics for Machine Learning](https://mml-book.github.io/)
@@ -55,7 +60,13 @@ This will be my own journey of me learning being better at ML. This is meant to 
 - [Stanford CS Library](http://cslibrary.stanford.edu/101/)
 - [Beej's Guide to C Programming](https://beej.us/guide/bgc/)
 - [How to Optimize a CUDA Matmul Kernel](https://siboehm.com/articles/22/CUDA-MMM)
+    - [code](https://github.com/ridgerchu/matmulfreellm)
 - [From Scratch series](https://biraj21.github.io/blogs/from-scratch.html)
+- [LLM.c](https://github.com/karpathy/llm.c?tab=readme-ov-file)
+- [PMPP-notes](https://github.com/loganwatchorn/notes-pmpp)
+- [my weak parralel guide](https://rebel-sushi-cd7.notion.site/PipeGoose-starter-ecc431cf9b7242d6bf933eac2a83b766)
+- [GPU MODE](https://github.com/gpu-mode)
+- [BIRDS cohort](https://sites.google.com/cohere.com/c4ai-community/community-programs/birds?authuser=0)
 #### Papers
 - [VLM's are blind](https://vlmsareblind.github.io/)
 - [Mamba the hard way](https://srush.github.io/annotated-mamba/hard.html?utm_source=substack&utm_medium=email)
