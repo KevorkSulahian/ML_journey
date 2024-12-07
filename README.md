@@ -89,10 +89,13 @@ This will be my own journey of me learning being better at ML. This is meant to 
 #### YouTube videos and channels
 ##### Channel
 -[Code in a jiffy](https://www.youtube.com/@codeinajiffy)
-##### Video
+##### Video or series
+- [Writing a C interpreter
+ series](https://www.youtube.com/playlist?list=PLbxut1xyrkCZ-9d_03G0KBU4uh782J1eN)
 
 #### Courses
 ##### High importance
+- [LLM uni course](https://cocoxu.github.io/CS8803-LLM-fall2024/calendar/)
 
 ##### else
 - [HF Deep RL](https://huggingface.co/learn/deep-rl-course/unit0/introduction)
@@ -123,3 +126,7 @@ This will be my own journey of me learning being better at ML. This is meant to 
 ### Code
 - [video tracking](https://github.com/roboflow/supervision)
 - [dspy rag](https://www.kaggle.com/code/iamleonie/rag-with-gemma-on-hf-and-weaviate-in-dspy)
+
+### Book
+- [Competitive Programmer’s Handbook
+](https://cses.fi/book/book.pdf)
