@@ -20,7 +20,7 @@ This will be my own journey of me learning being better at ML. This is meant to 
 
 ## Good reads
 - [Reward Hacking](https://lilianweng.github.io/posts/2024-11-28-reward-hacking/) what could go wrong in RLHF
-
+- [LLM tuning and alignment series by HF](https://argilla.io/blog/mantisnlp-rlhf-part-8/) Explains different techniches
 
 ## To do in the future
 
