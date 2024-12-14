@@ -11,7 +11,6 @@ This will be my own journey of me learning being better at ML. This is meant to 
 - [FinMAs (my graduation project)](https://github.com/KevorkSulahian/agentic-llm-for-better-results)
 - [Learning C cc4e](https://www.cc4e.com/)
 
-- [learnpytorch.io mostly following and not much else](https://www.learnpytorch.io/)
 
 
 ### Self improvment guides
@@ -133,3 +132,5 @@ This will be my own journey of me learning being better at ML. This is meant to 
 
 # Done things
 - [HF smol course](https://github.com/huggingface/smol-course)
+- [learnpytorch.io mostly following and not much else](https://www.learnpytorch.io/)
+
