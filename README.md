@@ -10,7 +10,7 @@ This will be my own journey of me learning being better at ML. This is meant to 
 ## Things I'm working on right now
 - [FinMAs (my graduation project)](https://github.com/KevorkSulahian/agentic-llm-for-better-results)
 - [Learning C cc4e](https://www.cc4e.com/)
-- [HF smol course](https://github.com/huggingface/smol-course)
+
 - [learnpytorch.io mostly following and not much else](https://www.learnpytorch.io/)
 
 
@@ -130,3 +130,6 @@ This will be my own journey of me learning being better at ML. This is meant to 
 ### Book
 - [Competitive Programmer’s Handbook
 ](https://cses.fi/book/book.pdf)
+
+# Done things
+- [HF smol course](https://github.com/huggingface/smol-course)
