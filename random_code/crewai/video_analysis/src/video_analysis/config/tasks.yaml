@@ -1,14 +1,21 @@
-reporting_task:
+video_task:
   description: >
-    Review the video/images and audio that you got and convert it into a summarized report.
-    [
-        "These are the frames from the video.",
-        *map(lambda x: {"type": "image_url", 
-                        "image_url": {"url": f'data:image/jpg;base64,{x}', "detail": "low"}}, base64Frames),
-        {"type": "text", "text": f"The audio transcription is: {transcription.text}"}
-        ]
-    Make sure the report is detailed and contains any and all relevant information.
+    You will recieve {video_frames} as formated base64 encoded images. your just is to identify the key visual elements in the video frames.
+    and make sure to summarize it in the end.
   expected_output: >
-    A fully fledge reports with the mains topics, each with a full section of information.
-    Formatted as markdown without '```'
-  agent: reporting_analyst
+    A list of key visual elements identified in the video frames.
+  agent: visual_analyst
+
+audio_task:
+  description: >
+    Analyze the audio transcription to extract main points and themes.
+  expected_output: >
+    A summary of key points from the audio transcription.
+  agent: audio_analyst
+
+summary_task:
+  description: >
+    Combine visual and audio analyses into a comprehensive summary.
+  expected_output: >
+    A cohesive summary integrating both visual and audio elements. make sure it's in out.md file.
+  agent: summary_analyst

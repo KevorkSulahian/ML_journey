@@ -1,9 +1,12 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
+# from crewai_tools import ImageProcessingTool, AudioTranscriptionTool
 
 # If you want to run a snippet of code before or after the crew starts, 
 # you can use the @before_kickoff and @after_kickoff decorators
 # https://docs.crewai.com/concepts/crews#example-crew-class-with-decorators
+
+
 
 @CrewBase
 class VideoAnalysis():
@@ -18,9 +21,25 @@ class VideoAnalysis():
 	# If you would like to add tools to your agents, you can learn more about it here:
 	# https://docs.crewai.com/concepts/agents#agent-tools
 	@agent
-	def reporting_analyst(self) -> Agent:
+	def visual_analyst(self) -> Agent:
 		return Agent(
-			config=self.agents_config['reporting_analyst'],
+			config=self.agents_config['visual_analyst'],
+			verbose=True
+			# tools= [image_tool]
+		)
+	
+	@agent
+	def audio_analyst(self) -> Agent:
+		return Agent(
+			config=self.agents_config['audio_analyst'],
+			verbose=True,
+			# tools= [audio_tool]
+		)
+	
+	@agent
+	def summary_analyst(self) -> Agent:
+		return Agent(
+			config=self.agents_config['summary_analyst'],
 			verbose=True
 		)
 
@@ -29,11 +48,23 @@ class VideoAnalysis():
 	# https://docs.crewai.com/concepts/tasks#overview-of-a-task
 
 	@task
-	def reporting_task(self) -> Task:
+	def video_task(self) -> Task:
 		return Task(
-			config=self.tasks_config['reporting_task'],
-			output_file='report.md'
+			config=self.tasks_config['video_task'],
 		)
+	
+	@task
+	def audio_task(self) -> Task:
+		return Task(
+			config=self.tasks_config['audio_task'],
+		)
+	
+	@task
+	def summary_task(self) -> Task:
+		return Task(
+			config=self.tasks_config['summary_task'],
+		)
+	
 
 	@crew
 	def crew(self) -> Crew:

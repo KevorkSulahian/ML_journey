@@ -72,8 +72,16 @@ def run():
     model="whisper-1",
     file=open(audio_path, "rb"),
 )
+    formatted_frames = list(
+    map(lambda x: {"type": "image_url", 
+                   "image_url": {"url": f"data:image/jpg;base64,{x}", "detail": "low"}},
+        base64Frames)
+)
+
+# Print to verify
+    print(len(formatted_frames))
     inputs = {
-        'video_frames': base64Frames,
+        'video_frames': formatted_frames,
         'audio': transcription
     }
     print("Running VideoAnalysis")
