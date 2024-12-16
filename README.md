@@ -19,7 +19,7 @@ This will be my own journey of me learning being better at ML. This is meant to 
 
 ## Good reads
 - [Reward Hacking](https://lilianweng.github.io/posts/2024-11-28-reward-hacking/) what could go wrong in RLHF
-- [LLM tuning and alignment series by HF](https://argilla.io/blog/mantisnlp-rlhf-part-8/) Explains different techniches
+- [LLM tuning and alignment series by HF](https://argilla.io/blog/mantisnlp-rlhf-part-8/) Explains different techniques
 
 ## To do in the future
 
@@ -74,6 +74,8 @@ This will be my own journey of me learning being better at ML. This is meant to 
 - [XLSTM](https://arxiv.org/abs/2405.04517)
 - [Scalable MatMul-free Language Modeling](https://arxiv.org/abs/2406.02528)
 - [Trading GPT](https://arxiv.org/pdf/2309.03736)
+- [Byte Latent Transformer: Patches Scale Better
+Than Tokens](https://scontent.fevn7-1.fna.fbcdn.net/v/t39.2365-6/470135129_1314438233309836_4712217603129928862_n.pdf?_nc_cat=111&ccb=1-7&_nc_sid=3c67a6&_nc_ohc=WqSN1qsot3oQ7kNvgGc3Ks0&_nc_zt=14&_nc_ht=scontent.fevn7-1.fna&_nc_gid=AuAtyo9EerO8d5oTZKbkCcN&oh=00_AYBBYci9U-4v0Ylk3Uwm9-z2WQT2r4yKCMdRdxW3bVs4ZQ&oe=67651A08)
 
 #### Codes to implelement
 - [Karapathy mibpe](https://github.com/karpathy/minbpe)
