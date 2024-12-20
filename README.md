@@ -15,6 +15,8 @@ This will be my own journey of me learning being better at ML. This is meant to 
 
 ### Self improvment guides
 - [write better code](https://marvelousmlops.substack.com/p/bridging-the-gap-converting-data)
+- [Document your grind](https://lelouch.dev/blog/august-2024/documenting-your-grind/)
+
 
 
 ## Good reads
@@ -44,7 +46,6 @@ This will be my own journey of me learning being better at ML. This is meant to 
 - [torch.compile, the missing manual](https://docs.google.com/document/d/1y5CRfMLdwEoF1nTk9q8qEu1mgMUuUtvhklPKJ2emLU8/edit?tab=t.0#heading=h.66t0x3z84jio)
 - [Build a GENAI platform](https://huyenchip.com/2024/07/25/genai-platform.html)
 - [New LLM Pre-training and Post-training Paradigms](https://magazine.sebastianraschka.com/p/new-llm-pre-training-and-post-training)
-- [Document your grind](https://lelouch.dev/blog/august-2024/documenting-your-grind/)
 - [A minimal Intro to Quantization](https://osanseviero.github.io/hackerllama/blog/posts/minimal-quantize-intro/)
 - [High Quality Human Data](https://lilianweng.github.io/posts/2024-02-05-human-data-quality/)
 
