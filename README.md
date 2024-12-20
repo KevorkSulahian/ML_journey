@@ -20,6 +20,8 @@ This will be my own journey of me learning being better at ML. This is meant to 
 ## Good reads
 - [Reward Hacking](https://lilianweng.github.io/posts/2024-11-28-reward-hacking/) what could go wrong in RLHF
 - [LLM tuning and alignment series by HF](https://argilla.io/blog/mantisnlp-rlhf-part-8/) Explains different techniques
+- [What We’ve Learned From A Year of Building with LLMs](https://applied-llms.org/) Guide to building llms from exp
+
 
 ## To do in the future
 
@@ -36,7 +38,6 @@ This will be my own journey of me learning being better at ML. This is meant to 
 - [LLM visualized](https://bbycroft.net/llm)
 - [LLM training](https://rentry.org/llm-training)
 - [hitchhiker_guide](https://osanseviero.github.io/hackerllama/blog/posts/hitchhiker_guide/)
-- [What We’ve Learned From A Year of Building with LLMs](https://applied-llms.org/)
 - [LLM Research Insights:](https://magazine.sebastianraschka.com/p/llm-research-insights-instruction?)
 - [FineWeb: decanting the web for the finest text data at scale](https://huggingface.co/spaces/HuggingFaceFW/blogpost-fineweb-v1)
 - [torch.compile, the missing manual](https://docs.google.com/document/d/1y5CRfMLdwEoF1nTk9q8qEu1mgMUuUtvhklPKJ2emLU8/edit?tab=t.0#heading=h.66t0x3z84jio)
@@ -44,7 +45,7 @@ This will be my own journey of me learning being better at ML. This is meant to 
 - [New LLM Pre-training and Post-training Paradigms](https://magazine.sebastianraschka.com/p/new-llm-pre-training-and-post-training)
 - [Document your grind](https://lelouch.dev/blog/august-2024/documenting-your-grind/)
 - [A minimal Intro to Quantization](https://osanseviero.github.io/hackerllama/blog/posts/minimal-quantize-intro/)
--[High Quality Human Data][https://lilianweng.github.io/posts/2024-02-05-human-data-quality/]
+- [High Quality Human Data](https://lilianweng.github.io/posts/2024-02-05-human-data-quality/)
 
 #### Books and math
 - [Mathematics for Machine Learning](https://mml-book.github.io/)
