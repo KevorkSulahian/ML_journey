@@ -29,6 +29,7 @@ This will be my own journey of me learning being better at ML. This is meant to 
 ##### Blog writers
 - [ML Blogs](https://cneuralnets.netlify.app/mlblogs)
 - [hackerllama](https://osanseviero.github.io/hackerllama/blog/)
+- [eugeneyan](https://eugeneyan.com/start-here/)
 
 ##### Just a blog
 - [Understanding Multimodal LLMs](https://magazine.sebastianraschka.com/p/understanding-multimodal-llms)
