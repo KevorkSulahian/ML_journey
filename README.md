@@ -53,6 +53,7 @@ This will be my own journey of me learning being better at ML. This is meant to 
 - [Introduction to Linear Algebra](https://pabloinsente.github.io/intro-linear-algebra)
 - [Financial analysis book](https://github.com/realmistic/PythonInvest-basic-fin-analysis)
 - [Graphic data science](https://geographicdata.science/book/intro.html)
+- [THE HUNDRED-PAGE LANGUAGE MODELSBOOK](https://thelmbook.com/)
 
 
 #### C and cuda
