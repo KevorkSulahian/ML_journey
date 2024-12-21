@@ -1,0 +1,7 @@
+write_video:
+  description: >
+    Write a technical report on the {summary}.
+    Ensure the report is engaging.
+  expected_output: >
+    A beautifully crafted report about {summary}, of the video.
+  agent: video_writer
