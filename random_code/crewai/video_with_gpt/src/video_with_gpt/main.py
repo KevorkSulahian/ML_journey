@@ -1,6 +1,7 @@
 from pydantic import BaseModel
 from crewai.flow.flow import Flow, listen, start
 from crews.video_crew.video_crew import VideoCrew
+from tools.custom_tool import generate_summary_from_frames_and_transcription
 from moviepy import VideoFileClip
 from typing import ClassVar
 import cv2
@@ -55,56 +56,44 @@ class VideoFlow(Flow[VideoState]):
         print("Processing Video")
         script_dir = os.path.dirname(os.path.abspath(__file__))
         video_path = os.path.join(script_dir, self.state.video_path)
-        base64Frames, audio_path = process_video(video_path, seconds_per_frame=1)
+        base64Frames, audio_path = process_video(video_path, seconds_per_frame=5)
 
-        print("Uploading audio to OpenAI")
-        transcription = self.state.client.audio.transcriptions.create(
-            model="whisper-1",
-            file=open(audio_path, "rb"),
-        )
-        self.state.transcription = transcription.text
+        # Define the transcription file path
+        transcription_file = f"{os.path.splitext(video_path)[0]}_transcription.txt"
+
+        if os.path.exists(transcription_file):
+            print("Transcription file exists. Reading from file.")
+            with open(transcription_file, "r") as file:
+                self.state.transcription = file.read()
+        else:
+            print("Uploading audio to OpenAI")
+            transcription = self.state.client.audio.transcriptions.create(
+                model="whisper-1",
+                file=open(audio_path, "rb"),
+            )
+            self.state.transcription = transcription.text
+
+            # Save transcription to file
+            with open(transcription_file, "w") as file:
+                file.write(self.state.transcription)
+
         self.state.base64Frames = base64Frames
-
         print("Transcription generated")
         return True
 
     @listen(generate_audio_and_frames)
     def generate_summary(self):
         print("Generating summary")
-        
-        # Limit the number of frames
-        selected_frames = self.state.base64Frames[:10]  # Only use the first 10 frames
-        
-        # Summarize transcription if too long
-        max_transcription_length = 1000  # Limit to 1000 characters
-        transcription = (
-            self.state.transcription[:max_transcription_length]
-            if len(self.state.transcription) > max_transcription_length
-            else self.state.transcription
+        # try:
+        self.state.summary = generate_summary_from_frames_and_transcription(
+            self.state.base64Frames, self.state.transcription, self.state.client
         )
-        
-        # Prepare the message
-        frame_text = "\n".join(
-            [f"![Frame](data:image/jpg;base64,{frame})" for frame in selected_frames]
-        )
-        user_message = f"""
-        These are the frames from the video:
-        {frame_text}
-        The audio transcription is: {transcription}
-        """
-        
-        # Send the request
-        response = self.state.client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=[
-                {"role": "system", "content": "Generate a video summary based on the frames and transcription."},
-                {"role": "user", "content": user_message},
-            ],
-            temperature=0,
-        )
-        self.state.summary = response["choices"][0]["message"]["content"]
+        print("Summary generated successfully")
+        # except Exception as e:
+        #     print(f"Error during summary generation: {e}")
+        #     # Return False to stop the flow
+        #     return False
         return True
-
 
     @listen(generate_summary)
     def analyze_summary(self):
