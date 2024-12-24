@@ -16,6 +16,7 @@ This will be my own journey of me learning being better at ML. This is meant to 
 ### Self improvment guides
 - [write better code](https://marvelousmlops.substack.com/p/bridging-the-gap-converting-data)
 - [Document your grind](https://lelouch.dev/blog/august-2024/documenting-your-grind/)
+- [Reclaiming your attention and focus - Unc advice for the world](https://x.com/LukasHozda/status/1860442337534468333)
 
 
 
@@ -34,6 +35,8 @@ This will be my own journey of me learning being better at ML. This is meant to 
 - [eugeneyan](https://eugeneyan.com/start-here/)
 
 ##### Just a blog
+- [transformer math](https://blog.eleuther.ai/transformer-math/)
+- [GNN intro](https://distill.pub/2021/gnn-intro/)
 - [Understanding Multimodal LLMs](https://magazine.sebastianraschka.com/p/understanding-multimodal-llms)
 - [Physics of Language Models](https://antaripasaha.notion.site/Physics-of-Language-Models-understanding-hidden-reasoning-process-1045314a563980c68566e4ecc1e32ef6)
 - [Policy Gradient](https://lilianweng.github.io/posts/2018-04-08-policy-gradient/)
@@ -57,6 +60,7 @@ This will be my own journey of me learning being better at ML. This is meant to 
 - [Financial analysis book](https://github.com/realmistic/PythonInvest-basic-fin-analysis)
 - [Graphic data science](https://geographicdata.science/book/intro.html)
 - [THE HUNDRED-PAGE LANGUAGE MODELSBOOK](https://thelmbook.com/)
+- [Building Blocks for theoretical computer science](https://mfleck.cs.illinois.edu/building-blocks/index-sp2020.html)
 
 
 #### C and cuda
@@ -70,6 +74,7 @@ This will be my own journey of me learning being better at ML. This is meant to 
 - [my weak parralel guide](https://rebel-sushi-cd7.notion.site/PipeGoose-starter-ecc431cf9b7242d6bf933eac2a83b766)
 - [GPU MODE](https://github.com/gpu-mode)
 - [BIRDS cohort](https://sites.google.com/cohere.com/c4ai-community/community-programs/birds?authuser=0)
+- [GPU Glossary](https://modal.com/gpu-glossary)
 #### Papers
 - [VLM's are blind](https://vlmsareblind.github.io/)
 - [Mamba the hard way](https://srush.github.io/annotated-mamba/hard.html?utm_source=substack&utm_medium=email)
@@ -95,16 +100,15 @@ Than Tokens](https://arxiv.org/pdf/2412.09871)
 ##### Channel
 -[Code in a jiffy](https://www.youtube.com/@codeinajiffy)
 ##### Video or series
-- [Writing a C interpreter
- series](https://www.youtube.com/playlist?list=PLbxut1xyrkCZ-9d_03G0KBU4uh782J1eN)
-
+- [Writing a C interpreter series](https://www.youtube.com/playlist?list=PLbxut1xyrkCZ-9d_03G0KBU4uh782J1eN)
+- [Deep Gen models](https://www.youtube.com/@prathoshap5226/playlists)
 #### Courses
 ##### High importance
 - [LLM uni course](https://cocoxu.github.io/CS8803-LLM-fall2024/calendar/)
 
 ##### else
 - [HF Deep RL](https://huggingface.co/learn/deep-rl-course/unit0/introduction)
-
+- [RL an overview](https://arxiv.org/pdf/2412.05265)
 - [NLP Course](https://www.nlpdemystified.org/course)
 
 #### IRL books 
@@ -131,10 +135,12 @@ Than Tokens](https://arxiv.org/pdf/2412.09871)
 ### Code
 - [video tracking](https://github.com/roboflow/supervision)
 - [dspy rag](https://www.kaggle.com/code/iamleonie/rag-with-gemma-on-hf-and-weaviate-in-dspy)
+- [Write your Own Virtual Machine](https://www.jmeiners.com/lc3-vm/)
 
 ### Book
-- [Competitive Programmer’s Handbook
-](https://cses.fi/book/book.pdf)
+- [Competitive Programmer’s Handbook](https://cses.fi/book/book.pdf)
+- [HPC](https://en.algorithmica.org/hpc/complexity/)
+- [What Every Programmer Should Know About Memory](https://people.freebsd.org/~lstewart/articles/cpumemory.pdf)
 
 # Done things
 - [HF smol course](https://github.com/huggingface/smol-course)
