@@ -1,5 +1,6 @@
 # ML_journey
 This will be my own journey of me learning being better at ML. This is meant to encourage me to learn and build more often.
+my [2d resume is here](https://kevorksulahian.github.io/2d-portfolio/)
 
 * The [`C`](./C) folder in this directory is for the [cc4e.com](https://cc4e.com) class. More coming soon.
 
@@ -110,6 +111,7 @@ Than Tokens](https://arxiv.org/pdf/2412.09871)
 - [HF Deep RL](https://huggingface.co/learn/deep-rl-course/unit0/introduction)
 - [RL an overview](https://arxiv.org/pdf/2412.05265)
 - [NLP Course](https://www.nlpdemystified.org/course)
+- [My 2d Resume by](https://youtu.be/wy_fSStEgMs?si=bH33OQwlYkCF0UEr)
 
 #### IRL books 
 
