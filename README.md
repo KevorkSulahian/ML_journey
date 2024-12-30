@@ -8,8 +8,15 @@ my [2d resume is here](https://kevorksulahian.github.io/2d-portfolio/)
 
 * And I am doing my experiments in the [`Random Code`](./random_code/) folder I will try to add more explanations once I have them. venv will probably be missing for most of them 😊.
 
+## Completed projects
+
+- [FinMAs](https://github.com/KevorkSulahian/agentic-llm-for-better-results)
+- [Byte Latent mini implemntation](./Karapathy/GPT_from_scratch/BLT.ipynb), mine has a static patches 4 bites each.
+- [NeoFetch](./random_code/neofetch/README.md) yes i use windows :/
+- i have older stuff but im still too lazy to add them
+
 ## Things I'm working on right now
-- [FinMAs (my graduation project)](https://github.com/KevorkSulahian/agentic-llm-for-better-results)
+- [FinMAs](https://github.com/KevorkSulahian/agentic-llm-for-better-results) working (slowly) on adding vision and updating the crew to work with flow
 - [Learning C cc4e](https://www.cc4e.com/)
 
 
@@ -21,10 +28,12 @@ my [2d resume is here](https://kevorksulahian.github.io/2d-portfolio/)
 
 
 
-## Good reads
+## Completed reads that i recommend
 - [Reward Hacking](https://lilianweng.github.io/posts/2024-11-28-reward-hacking/) what could go wrong in RLHF
 - [LLM tuning and alignment series by HF](https://argilla.io/blog/mantisnlp-rlhf-part-8/) Explains different techniques
 - [What We’ve Learned From A Year of Building with LLMs](https://applied-llms.org/) Guide to building llms from exp
+- [Byte Latent Transformer: Patches Scale Better
+Than Tokens](https://arxiv.org/pdf/2412.09871) instead of single byte they use patches, could scale better with images in the future
 
 
 ## To do in the future
@@ -84,8 +93,7 @@ my [2d resume is here](https://kevorksulahian.github.io/2d-portfolio/)
 - [XLSTM](https://arxiv.org/abs/2405.04517)
 - [Scalable MatMul-free Language Modeling](https://arxiv.org/abs/2406.02528)
 - [Trading GPT](https://arxiv.org/pdf/2309.03736)
-- [Byte Latent Transformer: Patches Scale Better
-Than Tokens](https://arxiv.org/pdf/2412.09871)
+
 
 #### Codes to implelement
 - [Karapathy mibpe](https://github.com/karpathy/minbpe)
