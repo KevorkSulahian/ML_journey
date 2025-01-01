@@ -53,13 +53,11 @@ Than Tokens](https://arxiv.org/pdf/2412.09871) instead of single byte they use p
 - [Flash Attention](https://benjaminwarner.dev/2023/08/16/flash-attention-compile)
 - [LLM visualized](https://bbycroft.net/llm)
 - [LLM training](https://rentry.org/llm-training)
-- [hitchhiker_guide](https://osanseviero.github.io/hackerllama/blog/posts/hitchhiker_guide/)
 - [LLM Research Insights:](https://magazine.sebastianraschka.com/p/llm-research-insights-instruction?)
 - [FineWeb: decanting the web for the finest text data at scale](https://huggingface.co/spaces/HuggingFaceFW/blogpost-fineweb-v1)
 - [torch.compile, the missing manual](https://docs.google.com/document/d/1y5CRfMLdwEoF1nTk9q8qEu1mgMUuUtvhklPKJ2emLU8/edit?tab=t.0#heading=h.66t0x3z84jio)
 - [Build a GENAI platform](https://huyenchip.com/2024/07/25/genai-platform.html)
 - [New LLM Pre-training and Post-training Paradigms](https://magazine.sebastianraschka.com/p/new-llm-pre-training-and-post-training)
-- [A minimal Intro to Quantization](https://osanseviero.github.io/hackerllama/blog/posts/minimal-quantize-intro/)
 - [High Quality Human Data](https://lilianweng.github.io/posts/2024-02-05-human-data-quality/)
 
 #### Books and math
