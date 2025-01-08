@@ -1,5 +1,5 @@
 # ML_journey
-This will be my own journey of me learning being better at ML. This is meant to encourage me to learn and build more often.
+This will be my own journey of learning to be better at ML. This is meant to encourage me to learn and build more often.
 my [2d resume is here](https://kevorksulahian.github.io/2d-portfolio/)
 
 * The [`C`](./C) folder in this directory is for the [cc4e.com](https://cc4e.com) class. More coming soon.
@@ -13,7 +13,7 @@ my [2d resume is here](https://kevorksulahian.github.io/2d-portfolio/)
 - [FinMAs](https://github.com/KevorkSulahian/agentic-llm-for-better-results)
 - [Byte Latent mini implemntation](./Karapathy/GPT_from_scratch/BLT.ipynb), mine has a static patches 4 bites each.
 - [NeoFetch](./random_code/neofetch/README.md) yes i use windows :/
-- i have older stuff but im still too lazy to add them
+- I have older stuff but I'm still too lazy to add them
 
 ## Things I'm working on right now
 - [FinMAs](https://github.com/KevorkSulahian/agentic-llm-for-better-results) working (slowly) on adding vision and updating the crew to work with flow
@@ -21,19 +21,24 @@ my [2d resume is here](https://kevorksulahian.github.io/2d-portfolio/)
 
 
 
-### Self improvment guides
+### Self-improvement guides
 - [write better code](https://marvelousmlops.substack.com/p/bridging-the-gap-converting-data)
 - [Document your grind](https://lelouch.dev/blog/august-2024/documenting-your-grind/)
 - [Reclaiming your attention and focus - Unc advice for the world](https://x.com/LukasHozda/status/1860442337534468333)
 
 
 
-## Completed reads that i recommend
+## Completed reads that I recommend
 - [Reward Hacking](https://lilianweng.github.io/posts/2024-11-28-reward-hacking/) what could go wrong in RLHF
 - [LLM tuning and alignment series by HF](https://argilla.io/blog/mantisnlp-rlhf-part-8/) Explains different techniques
 - [What We’ve Learned From A Year of Building with LLMs](https://applied-llms.org/) Guide to building llms from exp
 - [Byte Latent Transformer: Patches Scale Better
-Than Tokens](https://arxiv.org/pdf/2412.09871) instead of single byte they use patches, could scale better with images in the future
+Than Tokens](https://arxiv.org/pdf/2412.09871) instead of a single byte, they use patches, which could scale better with images in the future
+- [High-Quality Human Data](https://lilianweng.github.io/posts/2024-02-05-human-data-quality/) How human data is made, based on what I do on a daily basis, this is a useful read. It's not always about the model...
+
+## Completed Courses/projects
+- [HF smol course](https://github.com/huggingface/smol-course). Small but super nice intro to using HF finetuning and more.
+- [learnpytorch.io mostly following and not much else](https://www.learnpytorch.io/). 
 
 
 ## To do in the future
@@ -58,7 +63,6 @@ Than Tokens](https://arxiv.org/pdf/2412.09871) instead of single byte they use p
 - [torch.compile, the missing manual](https://docs.google.com/document/d/1y5CRfMLdwEoF1nTk9q8qEu1mgMUuUtvhklPKJ2emLU8/edit?tab=t.0#heading=h.66t0x3z84jio)
 - [Build a GENAI platform](https://huyenchip.com/2024/07/25/genai-platform.html)
 - [New LLM Pre-training and Post-training Paradigms](https://magazine.sebastianraschka.com/p/new-llm-pre-training-and-post-training)
-- [High Quality Human Data](https://lilianweng.github.io/posts/2024-02-05-human-data-quality/)
 
 #### Books and math
 - [Mathematics for Machine Learning](https://mml-book.github.io/)
@@ -110,7 +114,7 @@ Than Tokens](https://arxiv.org/pdf/2412.09871) instead of single byte they use p
 - [Writing a C interpreter series](https://www.youtube.com/playlist?list=PLbxut1xyrkCZ-9d_03G0KBU4uh782J1eN)
 - [Deep Gen models](https://www.youtube.com/@prathoshap5226/playlists)
 #### Courses
-##### High importance
+##### High Importance
 - [LLM uni course](https://cocoxu.github.io/CS8803-LLM-fall2024/calendar/)
 
 ##### else
@@ -122,9 +126,9 @@ Than Tokens](https://arxiv.org/pdf/2412.09871) instead of single byte they use p
 #### IRL books 
 
 ## my articles
-### Note: some of the articles are basically implmentation of tutorials so not fully mine
+### Note: some of the articles are basically implementation of tutorials so not fully mine
 - [Financial Analysis With Langchain and Crewai](https://huggingface.co/blog/herooooooooo/financial-analysis-with-langchain-and-crewai) some testing from langchain and crewai docs
-- [Automate Job Applications](https://huggingface.co/blog/herooooooooo/automation-job-applications-with-python-and-ollama) auto-rejection deserves auto apply
+- [Automate Job Applications](https://huggingface.co/blog/herooooooooo/automation-job-applications-with-python-and-ollama) auto-rejection deserves auto-apply
 - [FineTune Clip](https://medium.com/@kevork.ysulahian/finetune-clip-with-huggingface-2f0abc23c57c)
 - [Zero-shot Classification](https://medium.com/@kevork.ysulahian/zero-shot-classification-and-detection-made-simple-with-huggingface-000d63d53bfe)
 - [Data Scrapping project with R](https://medium.com/@kevork.ysulahian/real-life-data-scrapping-project-scrapping-job-postings-with-r-47a6091f4866)
@@ -145,12 +149,20 @@ Than Tokens](https://arxiv.org/pdf/2412.09871) instead of single byte they use p
 - [dspy rag](https://www.kaggle.com/code/iamleonie/rag-with-gemma-on-hf-and-weaviate-in-dspy)
 - [Write your Own Virtual Machine](https://www.jmeiners.com/lc3-vm/)
 
-### Book
+
+
+
+
+
+
+
+
+
+
+
+
 - [Competitive Programmer’s Handbook](https://cses.fi/book/book.pdf)
 - [HPC](https://en.algorithmica.org/hpc/complexity/)
 - [What Every Programmer Should Know About Memory](https://people.freebsd.org/~lstewart/articles/cpumemory.pdf)
 
-# Done things
-- [HF smol course](https://github.com/huggingface/smol-course)
-- [learnpytorch.io mostly following and not much else](https://www.learnpytorch.io/)
 
