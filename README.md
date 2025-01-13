@@ -18,7 +18,8 @@ my [2d resume is here](https://kevorksulahian.github.io/2d-portfolio/)
 ## Things I'm working on right now
 - [FinMAs](https://github.com/KevorkSulahian/agentic-llm-for-better-results) working (slowly) on adding vision and updating the crew to work with flow
 - [Learning C cc4e](https://www.cc4e.com/)
-
+- [I will need to pour my life into this](https://x.com/rasbt/status/1790007260615217156)
+- [neetcode a day keeps the unemployment away](https://neetcode.io/courses)
 
 
 ### Self-improvement guides
@@ -106,6 +107,7 @@ Than Tokens](https://arxiv.org/pdf/2412.09871) instead of a single byte, they us
 - [llama from scratch](https://github.com/naklecha/llama3-from-scratch)
 - [lightning snippets](https://lightning.ai/studios?section=featured)
 - [DPSY](https://lightning.ai/lightning-ai/studios/dspy-programming-with-foundation-models?view=public&section=all)
+- [Use and play the mini LLM boiii](https://github.com/jingyaogong/minimind/?tab=readme-ov-file)
 
 #### YouTube videos and channels
 ##### Channel
@@ -116,6 +118,8 @@ Than Tokens](https://arxiv.org/pdf/2412.09871) instead of a single byte, they us
 #### Courses
 ##### High Importance
 - [LLM uni course](https://cocoxu.github.io/CS8803-LLM-fall2024/calendar/)
+- [CS300](https://cs.brown.edu/courses/csci0300/2024/schedule.html)
+- [GENAI cours UNI](https://github.com/raminmohammadi/GEN-AI/tree/main?tab=readme-ov-file)
 
 ##### else
 - [HF Deep RL](https://huggingface.co/learn/deep-rl-course/unit0/introduction)
