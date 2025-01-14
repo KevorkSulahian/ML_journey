@@ -20,6 +20,7 @@ my [2d resume is here](https://kevorksulahian.github.io/2d-portfolio/)
 - [Learning C cc4e](https://www.cc4e.com/)
 - [I will need to pour my life into this](https://x.com/rasbt/status/1790007260615217156)
 - [neetcode a day keeps the unemployment away](https://neetcode.io/courses)
+- Also reading ![Bishop Deep Learning](./imgs/bishopDL.jpg) it's a new theoretical reintro to the math and theory
 
 
 ### Self-improvement guides
