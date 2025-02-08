@@ -89,6 +89,7 @@ Than Tokens](https://arxiv.org/pdf/2412.09871) instead of a single byte, they us
 - [GPU MODE](https://github.com/gpu-mode)
 - [BIRDS cohort](https://sites.google.com/cohere.com/c4ai-community/community-programs/birds?authuser=0)
 - [GPU Glossary](https://modal.com/gpu-glossary)
+- [C and Unix course](https://github.com/darrelllong/CSE-13S)
 #### Papers
 - [VLM's are blind](https://vlmsareblind.github.io/)
 - [Mamba the hard way](https://srush.github.io/annotated-mamba/hard.html?utm_source=substack&utm_medium=email)
@@ -109,6 +110,8 @@ Than Tokens](https://arxiv.org/pdf/2412.09871) instead of a single byte, they us
 - [lightning snippets](https://lightning.ai/studios?section=featured)
 - [DPSY](https://lightning.ai/lightning-ai/studios/dspy-programming-with-foundation-models?view=public&section=all)
 - [Use and play the mini LLM boiii](https://github.com/jingyaogong/minimind/?tab=readme-ov-file)
+- [HF TRL library](https://huggingface.co/docs/trl/index)
+- [HF Open-R1](https://github.com/huggingface/open-r1)
 
 #### YouTube videos and channels
 ##### Channel
@@ -125,8 +128,10 @@ Than Tokens](https://arxiv.org/pdf/2412.09871) instead of a single byte, they us
 ##### else
 - [HF Deep RL](https://huggingface.co/learn/deep-rl-course/unit0/introduction)
 - [RL an overview](https://arxiv.org/pdf/2412.05265)
+- [Stanford RL](https://web.stanford.edu/class/cs234/CS234Spr2024/modules.html)
 - [NLP Course](https://www.nlpdemystified.org/course)
-- [My 2d Resume by](https://youtu.be/wy_fSStEgMs?si=bH33OQwlYkCF0UEr)
+- [Advanced NLP](https://cmu-l3.github.io/anlp-spring2025/#details)
+- 
 
 #### IRL books 
 
