@@ -27,6 +27,8 @@ my [2d resume is here](https://kevorksulahian.github.io/2d-portfolio/)
 - [write better code](https://marvelousmlops.substack.com/p/bridging-the-gap-converting-data)
 - [Document your grind](https://lelouch.dev/blog/august-2024/documenting-your-grind/)
 - [Reclaiming your attention and focus - Unc advice for the world](https://x.com/LukasHozda/status/1860442337534468333)
+- [Machine Learning Interviews
+](https://huyenchip.com/machine-learning-systems-design/toc.html)
 
 
 
@@ -77,6 +79,7 @@ Than Tokens](https://arxiv.org/pdf/2412.09871) instead of a single byte, they us
 - [Graphic data science](https://geographicdata.science/book/intro.html)
 - [THE HUNDRED-PAGE LANGUAGE MODELSBOOK](https://thelmbook.com/)
 - [Building Blocks for theoretical computer science](https://mfleck.cs.illinois.edu/building-blocks/index-sp2020.html)
+- [Foundation of LLMS](https://www.alphaxiv.org/abs/2501.09223)
 
 
 #### C and cuda
@@ -100,6 +103,9 @@ Than Tokens](https://arxiv.org/pdf/2412.09871) instead of a single byte, they us
 - [XLSTM](https://arxiv.org/abs/2405.04517)
 - [Scalable MatMul-free Language Modeling](https://arxiv.org/abs/2406.02528)
 - [Trading GPT](https://arxiv.org/pdf/2309.03736)
+- [Titans : learning to memorize at test time](https://www.alphaxiv.org/abs/2501.00663)
+- [Transformers^2](https://www.alphaxiv.org/abs/2501.06252)
+- [LLM research 2024](https://sebastianraschka.com/blog/2025/llm-research-2024.html)
 
 
 #### Codes to implelement
@@ -126,6 +132,7 @@ Than Tokens](https://arxiv.org/pdf/2412.09871) instead of a single byte, they us
 - [LLM uni course](https://cocoxu.github.io/CS8803-LLM-fall2024/calendar/)
 - [CS300](https://cs.brown.edu/courses/csci0300/2024/schedule.html)
 - [GENAI cours UNI](https://github.com/raminmohammadi/GEN-AI/tree/main?tab=readme-ov-file)
+- [C and Unix programming](https://github.com/darrelllong/CSE-13S)
 
 ##### else
 - [HF Deep RL](https://huggingface.co/learn/deep-rl-course/unit0/introduction)
