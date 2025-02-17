@@ -21,6 +21,9 @@ my [2d resume is here](https://kevorksulahian.github.io/2d-portfolio/)
 - [I will need to pour my life into this](https://x.com/rasbt/status/1790007260615217156)
 - [neetcode a day keeps the unemployment away](https://neetcode.io/courses)
 - Also reading ![Bishop Deep Learning](./imgs/bishopDL.jpg) it's a new theoretical reintro to the math and theory
+- [deep ml exercises](https://www.deep-ml.com/)
+- [nand game](https://nandgame.com/)
+- [puzzles](https://www.cs.cmu.edu/puzzle/)
 
 
 ### Self-improvement guides
@@ -80,6 +83,7 @@ Than Tokens](https://arxiv.org/pdf/2412.09871) instead of a single byte, they us
 - [THE HUNDRED-PAGE LANGUAGE MODELSBOOK](https://thelmbook.com/)
 - [Building Blocks for theoretical computer science](https://mfleck.cs.illinois.edu/building-blocks/index-sp2020.html)
 - [Foundation of LLMS](https://www.alphaxiv.org/abs/2501.09223)
+- [AI Engineering](https://www.oreilly.com/library/view/ai-engineering/9781098166298/)
 
 
 #### C and cuda
