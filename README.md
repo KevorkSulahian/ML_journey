@@ -44,6 +44,7 @@ Than Tokens](https://arxiv.org/pdf/2412.09871) instead of a single byte, they us
 - [High-Quality Human Data](https://lilianweng.github.io/posts/2024-02-05-human-data-quality/) How human data is made, based on what I do on a daily basis, this is a useful read. It's not always about the model...
 - [The Illustrated DeepSeek-R1](https://newsletter.languagemodels.co/p/the-illustrated-deepseek-r1)
 - [A vision researcher’s guide to some RL stuff: PPO & GRPO](https://yugeten.github.io/posts/2025/01/ppogrpo/)
+- [understanding-multimodal-llms](https://magazine.sebastianraschka.com/p/understanding-multimodal-llms)
 
 ## Completed Courses/projects
 - [HF smol course](https://github.com/huggingface/smol-course). Small but super nice intro to using HF finetuning and more.
