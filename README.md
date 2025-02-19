@@ -49,7 +49,8 @@ Than Tokens](https://arxiv.org/pdf/2412.09871) instead of a single byte, they us
 
 ## Completed Courses/projects
 - [HF smol course](https://github.com/huggingface/smol-course). Small but super nice intro to using HF finetuning and more.
-- [learnpytorch.io mostly following and not much else](https://www.learnpytorch.io/). 
+- [learnpytorch.io mostly following and not much else](https://www.learnpytorch.io/).
+- [hf agents](https://huggingface.co/learn/agents-course)
 
 
 ## To do in the future
