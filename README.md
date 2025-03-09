@@ -159,6 +159,8 @@ Than Tokens](https://arxiv.org/pdf/2412.09871) instead of a single byte, they us
 - [FineTune Clip](https://medium.com/@kevork.ysulahian/finetune-clip-with-huggingface-2f0abc23c57c)
 - [Zero-shot Classification](https://medium.com/@kevork.ysulahian/zero-shot-classification-and-detection-made-simple-with-huggingface-000d63d53bfe)
 - [Data Scrapping project with R](https://medium.com/@kevork.ysulahian/real-life-data-scrapping-project-scrapping-job-postings-with-r-47a6091f4866)
+- [My First C project](https://huggingface.co/blog/herooooooooo/c-first-project)
+
 
 
 
