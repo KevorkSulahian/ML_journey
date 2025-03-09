@@ -84,15 +84,9 @@ int main(int argc, char **argv) {
         free(content);
     }
 
-    // int x = read_file(args.files[0], &buffer);
     printf("%s\n", buffer);
     free(buffer);
     free(args.files);   
-    // printf("%d\n", x);
     
     return 0;
 }
-
-// how to compile with gcc
-// gcc main.c -o main
-// ./main
