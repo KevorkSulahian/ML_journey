@@ -32,6 +32,7 @@ my [2d resume is here](https://kevorksulahian.github.io/2d-portfolio/)
 - [Reclaiming your attention and focus - Unc advice for the world](https://x.com/LukasHozda/status/1860442337534468333)
 - [Machine Learning Interviews
 ](https://huyenchip.com/machine-learning-systems-design/toc.html)
+- [LLM (ML) Job Interviews (Fall 2024) - Process](https://mimansajaiswal.github.io/posts/llm-ml-job-interviews-fall-2024-process/)
 
 
 
