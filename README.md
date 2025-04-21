@@ -48,6 +48,7 @@ Than Tokens](https://arxiv.org/pdf/2412.09871) instead of a single byte, they us
 - [understanding-multimodal-llms](https://magazine.sebastianraschka.com/p/understanding-multimodal-llms)
 - I highly recommend the [A vision researcher’s guide to some RL stuff](https://yugeten.github.io/posts/2025/01/ppogrpo/) for its simplicity
 - [AI progress visualized](https://theaidigest.org/progress-and-dangers), it's a really fun read.
+- [The State of Reinforcement Learning for LLM Reasoning - 2025](https://magazine.sebastianraschka.com/p/the-state-of-llm-reasoning-model-training?utm_campaign=post) would be worth to go over the papers at the end one more time.
 
 ## Completed Courses/projects
 - [HF smol course](https://github.com/huggingface/smol-course). Small but super nice intro to using HF finetuning and more.
