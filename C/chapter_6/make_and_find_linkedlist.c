@@ -1,4 +1,4 @@
-#include <stdio.h>
+ #include <stdio.h>
 #include <stdlib.h>
 
 struct lnode {
@@ -28,6 +28,31 @@ void list_add(lst, value)
     } else {
         lst->tail->next = newnode;
         lst->tail = newnode;
+    }
+}
+
+void list_remove(lst, value)
+    struct list *lst;
+    int value;
+{
+    struct lnode *cur = lst->head;
+    struct lnode *prev = NULL;
+
+    while (cur != NULL) {
+        if (cur->value == value) {
+            if (prev == NULL) {
+                lst->head = cur->next;
+            } else {
+                prev->next = cur->next;
+            }
+            if (cur == lst->tail) {
+                lst->tail = prev;
+            }
+            free(cur);
+            return;
+        }
+        prev = cur;
+        cur = cur->next;
     }
 }
 
