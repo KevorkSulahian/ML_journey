@@ -24,6 +24,7 @@ my [2d resume is here](https://kevorksulahian.github.io/2d-portfolio/)
 - [deep ml exercises](https://www.deep-ml.com/)
 - [nand game](https://nandgame.com/)
 - [puzzles](https://www.cs.cmu.edu/puzzle/)
+- [A long list of open problems and concrete projects in evals](https://docs.google.com/document/d/1gi32-HZozxVimNg5Mhvk4CvW4zq8J12rGmK_j2zxNEg/edit?pli=1&tab=t.0#heading=h.q14pjbvzx1x)
 
 
 ### Self-improvement guides
