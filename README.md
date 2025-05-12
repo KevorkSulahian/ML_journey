@@ -8,11 +8,12 @@ my [2d resume is here](https://kevorksulahian.github.io/2d-portfolio/)
 
 * And I am doing my experiments in the [`Random Code`](./random_code/) folder I will try to add more explanations once I have them. venv will probably be missing for most of them 😊.
 
-## Completed projects
+## Completed projects/cpde
 
 - [FinMAs](https://github.com/KevorkSulahian/agentic-llm-for-better-results)
 - [Byte Latent mini implemntation](./Karapathy/GPT_from_scratch/BLT.ipynb), mine has a static patches 4 bites each.
 - [NeoFetch](./random_code/neofetch/README.md) yes i use windows :/
+- [Karapathy minbpe](https://github.com/karpathy/minbpe) done [here](./Karapathy/GPT_from_scratch/token.ipynb)
 - I have older stuff but I'm still too lazy to add them
 
 ## Things I'm working on right now
@@ -120,7 +121,6 @@ Than Tokens](https://arxiv.org/pdf/2412.09871) instead of a single byte, they us
 
 
 #### Codes to implelement
-- [Karapathy mibpe](https://github.com/karpathy/minbpe)
 - [Cohere agents](https://github.com/cohere-ai/notebooks/tree/main?tab=readme-ov-file#agents)
 - [Building A GPT-Style LLM Classifier From Scratch By Sebastian](https://magazine.sebastianraschka.com/p/building-a-gpt-style-llm-classifier?)
 - [lora from scratch by Sebastian](https://lightning.ai/lightning-ai/studios/code-lora-from-scratch?view=public&section=featured)
