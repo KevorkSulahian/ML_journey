@@ -67,7 +67,6 @@ Than Tokens](https://arxiv.org/pdf/2412.09871) instead of a single byte, they us
 - [eugeneyan](https://eugeneyan.com/start-here/)
 
 ##### Just a blog
-- [transformer math](https://blog.eleuther.ai/transformer-math/)
 - [GNN intro](https://distill.pub/2021/gnn-intro/)
 - [Understanding Multimodal LLMs](https://magazine.sebastianraschka.com/p/understanding-multimodal-llms)
 - [Physics of Language Models](https://antaripasaha.notion.site/Physics-of-Language-Models-understanding-hidden-reasoning-process-1045314a563980c68566e4ecc1e32ef6)
