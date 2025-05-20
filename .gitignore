@@ -7,3 +7,4 @@ random_code/crewai/agentic_sales_pipeline/.env".env"
 random_code/crewai/video_analysis/uv.lock
 random_code/movie_recommendations
 .env
+.DS_Store
