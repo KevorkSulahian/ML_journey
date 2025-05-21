@@ -63,3 +63,4 @@ fp2) != NULL) {
 
     return 0;
 }
+// This program compares two files line by line and character by character.
