@@ -38,7 +38,7 @@ my [2d resume is here](https://kevorksulahian.github.io/2d-portfolio/)
 
 
 
-## Completed reads that I recommend
+## Completed stuff that I recommend
 - [Reward Hacking](https://lilianweng.github.io/posts/2024-11-28-reward-hacking/) what could go wrong in RLHF
 - [LLM tuning and alignment series by HF](https://argilla.io/blog/mantisnlp-rlhf-part-8/) Explains different techniques
 - [What We’ve Learned From A Year of Building with LLMs](https://applied-llms.org/) Guide to building llms from exp
@@ -51,11 +51,12 @@ Than Tokens](https://arxiv.org/pdf/2412.09871) instead of a single byte, they us
 - I highly recommend the [A vision researcher’s guide to some RL stuff](https://yugeten.github.io/posts/2025/01/ppogrpo/) for its simplicity
 - [AI progress visualized](https://theaidigest.org/progress-and-dangers), it's a really fun read.
 - [The State of Reinforcement Learning for LLM Reasoning - 2025](https://magazine.sebastianraschka.com/p/the-state-of-llm-reasoning-model-training?utm_campaign=post) would be worth to go over the papers at the end one more time.
-- [Sabotage Evaluations for Frontier Models](https://arxiv.org/pdf/2410.21514)
+- [Sabotage Evaluations for Frontier Models](https://arxiv.org/pdf/2410.21514) Great paper on evals
 - [KL Divergence](https://www.countbayesie.com/blog/2017/5/9/kullback-leibler-divergence-explained)
 - [Momentum](https://distill.pub/2017/momentum/)
-- [BroadCasting](https://numpy.org/doc/stable/user/basics.broadcasting.html)
+- [BroadCasting](https://numpy.org/doc/stable/user/basics.broadcasting.html) how python works
 - [Singular Vector Decomposition](https://gregorygundersen.com/blog/2018/12/10/svd/)
+- [GRPO Video explenation](https://youtu.be/XeUB4h1OO1g?si=UwQiG3az286G4b1c)
 
 ## Completed Courses/projects
 - [HF smol course](https://github.com/huggingface/smol-course). Small but super nice intro to using HF finetuning and more.
