@@ -57,6 +57,7 @@ Than Tokens](https://arxiv.org/pdf/2412.09871) instead of a single byte, they us
 - [BroadCasting](https://numpy.org/doc/stable/user/basics.broadcasting.html) how python works
 - [Singular Vector Decomposition](https://gregorygundersen.com/blog/2018/12/10/svd/)
 - [GRPO Video explenation](https://youtu.be/XeUB4h1OO1g?si=UwQiG3az286G4b1c)
+- [Visual info](https://colah.github.io/posts/2015-09-Visual-Information/) pretty decent article would read again.
 
 ## Completed Courses/projects
 - [HF smol course](https://github.com/huggingface/smol-course). Small but super nice intro to using HF finetuning and more.
