@@ -8,3 +8,13 @@ random_code/crewai/video_analysis/uv.lock
 random_code/movie_recommendations
 .env
 .DS_Store
+articles/math.valid
+articles/cc-index.csv
+articles/math.train
+articles/model/math-classifier.bin
+articles/demystifying-deepseekmaths/cc-index.csv
+articles/demystifying-deepseekmaths/math.train
+.gitignore
+articles/demystifying-deepseekmaths/math.valid
+articles/demystifying-deepseekmaths/pass1-math.jsonl
+articles/demystifying-deepseekmaths/model/math-classifier.bin
