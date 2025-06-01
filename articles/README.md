@@ -1,1 +1,1 @@
-- [demystifying deepseekmaths](https://huggingface.co/blog/herooooooooo/demystifying-deepseekmaths-data-pipeline-a-fasttex
+- [demystifying deepseekmaths](https://huggingface.co/blog/herooooooooo/demystifying-deepseekmaths-data-pipeline-a-fasttex)
