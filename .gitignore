@@ -18,3 +18,5 @@ articles/demystifying-deepseekmaths/math.train
 articles/demystifying-deepseekmaths/math.valid
 articles/demystifying-deepseekmaths/pass1-math.jsonl
 articles/demystifying-deepseekmaths/model/math-classifier.bin
+unsloth_compiled_cache
+synthetic_data_kit_config.yaml
