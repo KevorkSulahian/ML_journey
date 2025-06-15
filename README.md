@@ -58,6 +58,7 @@ Than Tokens](https://arxiv.org/pdf/2412.09871) instead of a single byte, they us
 - [Singular Vector Decomposition](https://gregorygundersen.com/blog/2018/12/10/svd/)
 - [GRPO Video explenation](https://youtu.be/XeUB4h1OO1g?si=UwQiG3az286G4b1c)
 - [Visual info](https://colah.github.io/posts/2015-09-Visual-Information/) pretty decent article would read again.
+- [diffusion-theory-from-scratch](https://iclr-blogposts.github.io/2024/blog/diffusion-theory-from-scratch/)
 
 ## Completed Courses/projects
 - [HF smol course](https://github.com/huggingface/smol-course). Small but super nice intro to using HF finetuning and more.
