@@ -20,3 +20,7 @@ articles/demystifying-deepseekmaths/pass1-math.jsonl
 articles/demystifying-deepseekmaths/model/math-classifier.bin
 unsloth_compiled_cache
 synthetic_data_kit_config.yaml
+random_code/LLM_from_scratch/chapter_5/train.py
+random_code/LLM_from_scratch/chapter_5/model.pth
+random_code/LLM_from_scratch/chapter_5/loss.pdf
+random_code/LLM_from_scratch/chapter_5/the-verdict.txt
