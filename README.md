@@ -8,13 +8,23 @@ my [2d resume is here](https://kevorksulahian.github.io/2d-portfolio/)
 
 * And I am doing my experiments in the [`Random Code`](./random_code/) folder I will try to add more explanations once I have them. venv will probably be missing for most of them 😊.
 
-## Completed projects/cpde
+## Completed projects/code
 
 - [FinMAs](https://github.com/KevorkSulahian/agentic-llm-for-better-results)
 - [Byte Latent mini implemntation](./Karapathy/GPT_from_scratch/BLT.ipynb), mine has a static patches 4 bites each.
 - [NeoFetch](./random_code/neofetch/README.md) yes i use windows :/
 - [Karapathy minbpe](https://github.com/karpathy/minbpe) done [here](./Karapathy/GPT_from_scratch/token.ipynb)
 - I have older stuff but I'm still too lazy to add them
+  
+### my articles
+#### Note: some of the articles are basically implementation of tutorials so not fully mine
+- [Demystifying DeepSeekMath’s Data Pipeline: A FastText-Based Reproduction and Analysis](https://huggingface.co/blog/herooooooooo/demystifying-deepseekmaths-data-pipeline-a-fasttex). Simply summarized, how they are classifying the data that they captured online.
+- [Financial Analysis With Langchain and Crewai](https://huggingface.co/blog/herooooooooo/financial-analysis-with-langchain-and-crewai) some testing from langchain and crewai docs
+- [Automate Job Applications](https://huggingface.co/blog/herooooooooo/automation-job-applications-with-python-and-ollama) auto-rejection deserves auto-apply
+- [FineTune Clip](https://medium.com/@kevork.ysulahian/finetune-clip-with-huggingface-2f0abc23c57c)
+- [Zero-shot Classification](https://medium.com/@kevork.ysulahian/zero-shot-classification-and-detection-made-simple-with-huggingface-000d63d53bfe)
+- [Data Scrapping project with R](https://medium.com/@kevork.ysulahian/real-life-data-scrapping-project-scrapping-job-postings-with-r-47a6091f4866)
+- [My First C project](https://huggingface.co/blog/herooooooooo/c-first-project)
 
 ## Things I'm working on right now
 - [FinMAs](https://github.com/KevorkSulahian/agentic-llm-for-better-results) working (slowly) on adding vision and updating the crew to work with flow
@@ -162,14 +172,7 @@ Than Tokens](https://arxiv.org/pdf/2412.09871) instead of a single byte, they us
 
 #### IRL books 
 
-## my articles
-### Note: some of the articles are basically implementation of tutorials so not fully mine
-- [Financial Analysis With Langchain and Crewai](https://huggingface.co/blog/herooooooooo/financial-analysis-with-langchain-and-crewai) some testing from langchain and crewai docs
-- [Automate Job Applications](https://huggingface.co/blog/herooooooooo/automation-job-applications-with-python-and-ollama) auto-rejection deserves auto-apply
-- [FineTune Clip](https://medium.com/@kevork.ysulahian/finetune-clip-with-huggingface-2f0abc23c57c)
-- [Zero-shot Classification](https://medium.com/@kevork.ysulahian/zero-shot-classification-and-detection-made-simple-with-huggingface-000d63d53bfe)
-- [Data Scrapping project with R](https://medium.com/@kevork.ysulahian/real-life-data-scrapping-project-scrapping-job-postings-with-r-47a6091f4866)
-- [My First C project](https://huggingface.co/blog/herooooooooo/c-first-project)
+
 
 
 
