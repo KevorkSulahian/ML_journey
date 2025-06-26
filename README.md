@@ -70,7 +70,7 @@ Than Tokens](https://arxiv.org/pdf/2412.09871) instead of a single byte, they us
 - [Visual info](https://colah.github.io/posts/2015-09-Visual-Information/) pretty decent article would read again.
 - [diffusion-theory-from-scratch](https://iclr-blogposts.github.io/2024/blog/diffusion-theory-from-scratch/)
 
-## Completed Courses/projects
+## tiny achievements
 - [HF smol course](https://github.com/huggingface/smol-course). Small but super nice intro to using HF finetuning and more.
 - [learnpytorch.io mostly following and not much else](https://www.learnpytorch.io/).
 - [hf agents](https://huggingface.co/learn/agents-course)
