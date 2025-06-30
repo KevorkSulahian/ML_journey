@@ -49,6 +49,7 @@ my [2d resume is here](https://kevorksulahian.github.io/2d-portfolio/)
 
 
 ## Completed stuff that I recommend
+- [LLama from scratch](https://blog.briankitano.com/llama-from-scratch/#:~:text=Before%20you%20even%20look%20at,and%20evaluating%20as%20you%20go) I really enjoyed how this person was implementing the paper, use it to implement future papers.
 - [Reward Hacking](https://lilianweng.github.io/posts/2024-11-28-reward-hacking/) what could go wrong in RLHF
 - [LLM tuning and alignment series by HF](https://argilla.io/blog/mantisnlp-rlhf-part-8/) Explains different techniques
 - [What We’ve Learned From A Year of Building with LLMs](https://applied-llms.org/) Guide to building llms from exp
