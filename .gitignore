@@ -24,3 +24,6 @@ random_code/LLM_from_scratch/chapter_5/train.py
 random_code/LLM_from_scratch/chapter_5/model.pth
 random_code/LLM_from_scratch/chapter_5/loss.pdf
 random_code/LLM_from_scratch/chapter_5/the-verdict.txt
+random_code/NM/results_full
+random_code/NM/results_tokens
+random_code/NM/results_nouns
