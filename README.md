@@ -9,14 +9,14 @@
 ## 📑 Table of Contents
 - [About](#about)  
 - [Structure](#structure)  
-- [✅ Completed projects/code](#✅-completed-projectscode)  
-- [📝 my articles](#📝-my-articles)  
-- [🚧 Things I'm working on right now](#🚧-things-im-working-on-right-now)  
-- [💡 Self-improvement guides](#💡-self-improvement-guides)  
-- [📚 Completed stuff that I recommend](#📚-completed-stuff-that-i-recommend)  
-- [🏆 tiny achievements](#🏆-tiny-achievements)  
-- [🔮 To do in the future](#🔮-to-do-in-the-future)  
-- [✨ Maybe things](#✨-maybe-things)  
+- [✅ Completed projects/code](#-completed-projectscode)  
+- [📝 my articles](#-my-articles)  
+- [🚧 Things I'm working on right now](#-things-im-working-on-right-now)  
+- [💡 Self-improvement guides](#-self-improvement-guides)  
+- [📚 Completed stuff that I recommend](#-completed-stuff-that-i-recommend)  
+- [🏆 tiny achievements](#-tiny-achievements)  
+- [🔮 To do in the future](#-to-do-in-the-future)  
+- [✨ Maybe things](#-maybe-things)  
 
 ## About
 This will be my own journey of learning to be better at ML. This is meant to encourage me to learn and build more often.  
