@@ -76,7 +76,8 @@ kevorksulahian-ml_journey/
 - [Document your grind](https://lelouch.dev/blog/august-2024/documenting-your-grind/)  
 - [Reclaiming your attention and focus - Unc advice for the world](https://x.com/LukasHozda/status/1860442337534468333)  
 - [Machine Learning Interviews](https://huyenchip.com/machine-learning-systems-design/toc.html)  
-- [LLM (ML) Job Interviews (Fall 2024) - Process](https://mimansajaiswal.github.io/posts/llm-ml-job-interviews-fall-2024-process/)  
+- [LLM (ML) Job Interviews (Fall 2024) - Process](https://mimansajaiswal.github.io/posts/llm-ml-job-interviews-fall-2024-process/)
+- [How To work in with Mentors or managers](https://medium.com/@jurgens_24580/reflections-on-strategies-for-successful-meetings-with-undergraduate-researchers-ae22306ecd8d)
 
 ## 📚 Completed stuff that I recommend
 - [LLama from scratch](https://blog.briankitano.com/llama-from-scratch/#:~:text=Before%20you%20even%20look%20at,and%20evaluating%20as%20you%20go) I really enjoyed how this person was implementing the paper, use it to implement future papers.  
