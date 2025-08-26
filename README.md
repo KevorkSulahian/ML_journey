@@ -9,7 +9,7 @@
 ## 📑 Table of Contents
 - [About](#about)  
 - [Structure](#%EF%B8%8F-structure)  
-- [✅ Completed projects/code](#-completed-projectscode)  
+- [✅ Completed projects/code and learning](#-completed-projectscode)  
 - [📝 my articles](#-my-articles)  
 - [🚧 Things I'm working on right now](#-things-im-working-on-right-now)  
 - [💡 Self-improvement guides](#self-improvement-guides)  
@@ -43,11 +43,12 @@ kevorksulahian-ml_journey/
 ```
 </details>
 
-## ✅ Completed projects/code
+## ✅ Completed Projects/Code and Learning
 - [FinMAs](https://github.com/KevorkSulahian/agentic-llm-for-better-results)  
 - [Byte Latent mini implemntation](./Karapathy/GPT_from_scratch/BLT.ipynb), mine has a static patches 4 bites each.  
 - [NeoFetch](./random_code/neofetch/README.md) yes i use windows :/  
-- [Karapathy minbpe](https://github.com/karpathy/minbpe) done [here](./Karapathy/GPT_from_scratch/token.ipynb)  
+- [Karapathy minbpe](https://github.com/karpathy/minbpe) done [here](./Karapathy/GPT_from_scratch/token.ipynb)
+- [Learning C cc4e](https://www.cc4e.com/) kinda finished most of the book 
 - I have older stuff but I'm still too lazy to add them  
 
 ## 📝 my articles
@@ -61,8 +62,7 @@ kevorksulahian-ml_journey/
 - [My First C project](https://huggingface.co/blog/herooooooooo/c-first-project)  
 
 ## 🚧 Things I'm working on right now
-- [FinMAs](https://github.com/KevorkSulahian/agentic-llm-for-better-results) working (slowly) on adding vision and updating the crew to work with flow  
-- [Learning C cc4e](https://www.cc4e.com/)  
+- [FinMAs](https://github.com/KevorkSulahian/agentic-llm-for-better-results) working (slowly) on adding vision and updating the crew to work with flow/  
 - [I will need to pour my life into this](https://x.com/rasbt/status/1790007260615217156)  
 - [neetcode a day keeps the unemployment away](https://neetcode.io/courses)  
 - Also reading ![Bishop Deep Learning](./imgs/bishopDL.jpg) it's a new theoretical reintro to the math and theory  
