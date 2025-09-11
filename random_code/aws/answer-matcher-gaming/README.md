@@ -168,6 +168,21 @@ This removes most surface/ordering effects and gives you a clean comparison poin
 
 ---
 
+### Optional: Rulebook integration
+
+You can inject small domain reminders into the system prompt.
+Example: physics questions can add heuristics like “Use F = m·a” or “Reject unit mismatches”.
+
+Optional: Rulebook integration
+
+Enable with:
+
+```bash
+python bedrock_eval.py --csv /path/to/gpqa.csv --rules --rules-toml rulebook.toml
+```
+
+This pulls top-k relevant rules from rulebook.toml and adds them alongside the base protocol.
+
 ## Repro tips
 
 * Use **different models** for generator vs judge if possible.

@@ -35,6 +35,7 @@ import statistics as st
 import pandas as pd
 import boto3
 from botocore.exceptions import BotoCoreError, ClientError
+from rulebook import RulesKB
 
 logger = logging.getLogger("bedrock-eval")
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
@@ -229,6 +230,14 @@ Options (for context only):
 {bullets(choices)}
 """
 
+def _guess_domain(q: str):
+    ql = q.lower()
+    if any(w in ql for w in ["newton","force","kg","m/s","acceleration","joule","voltage","charge"]): return "physics"
+    if any(w in ql for w in ["integral","derivative","matrix","probability","limit","log"]): return "math"
+    return None
+
+
+
 # --------------------------- judge prompt (0–1) ----------------------
 def build_judge_score_json(question: str, gold_text: str, candidate_answer: str) -> str:
     return f"""You are an answer-matcher. Output ONLY valid JSON:
@@ -272,10 +281,11 @@ def parse_judge_json_score(text: str) -> Tuple[Optional[float], str]:
 
 # --------------------------- core run per variant --------------------
 def run_variant(client, gen_id: str, judge_id: str, item: Dict[str,Any], variant: str,
-                t_att: float = 0.6, t_norm: float = 0.2) -> Dict[str,Any]:
+                t_att: float = 0.6, t_norm: float = 0.2,
+                system_gen_override: Optional[str] = None) -> Dict[str,Any]:
     q = item["question"]
     gt = item["gt_text"]
-    system_gen = "Answer decisively and follow instructions exactly."
+    system_gen = system_gen_override or "Answer decisively and follow instructions exactly."
     temp = t_norm
 
     if item["type"] == "mcq":
@@ -368,6 +378,12 @@ def main():
     ap.add_argument("--judge-model-id", type=str, default=DEFAULT_JUDGE_MODEL_ID)
     ap.add_argument("--region", type=str, default=DEFAULT_REGION)
     ap.add_argument("--profile", type=str, default=DEFAULT_PROFILE)
+    ap.add_argument("--rules", action="store_true", help="Enable rules-as-reminders system message")
+    ap.add_argument("--rules-toml", type=str, default="rulebook.toml", help="Path to rulebook TOML")
+    ap.add_argument("--rules-model", type=str, default="sentence-transformers/all-MiniLM-L6-v2", help="ST model for embeddings")
+    ap.add_argument("--rules-k", type=int, default=5, help="Top-k rules to inject")
+    ap.add_argument("--rules-domain", type=str, default=None, help="Optional domain filter (e.g., physics, math, general)")
+
     args = ap.parse_args()
 
     logger.info("Config: profile=%s region=%s gen=%s judge=%s",
@@ -380,10 +396,31 @@ def main():
         df = df.iloc[:args.limit].copy()
     items = dataframe_to_items(df)
 
+    rules_kb = None
+    if args.rules:
+        logger.info("Initializing RulesKB from %s (model=%s)", args.rules_toml, args.rules_model)
+        rules_kb = RulesKB(rulebook_path=args.rules_toml, model_name=args.rules_model)
+
+
     results = []
     for it in items:
         for variant in VARIANTS:
-            r = run_variant(client, args.gen_model_id, args.judge_model_id, it, variant)
+            sys_override = None
+            if rules_kb is not None:
+                domain = args.rules_domain or _guess_domain(it["question"])
+                hits = rules_kb.retrieve(it["question"], k=args.rules_k, domain=domain)
+                logger.info("Rules used (%s): %s", domain, [h["metadata"]["title"] for h in hits])
+                sys_override = rules_kb.build_system_message(
+                    question=it["question"],
+                    k=args.rules_k,
+                    domain=domain,
+                )
+
+            r = run_variant(
+                client, args.gen_model_id, args.judge_model_id, it, variant,
+                system_gen_override=sys_override,
+             )
+
             results.append(r)
 
             # pretty print short log
