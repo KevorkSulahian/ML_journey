@@ -1,0 +1,29 @@
+# Dockerfile (simple)
+FROM python:3.11-slim
+
+# Make Python nice in containers
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1
+
+# Tiny init for clean shutdowns (Ctrl+C)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates tini && \
+    rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+# Copy your code into the image
+# (If your project is large, you can copy pyproject first for better caching,
+# but copying all is simplest to start.)
+COPY . .
+
+# Install your project and deps from pyproject.toml
+RUN python -m pip install --upgrade pip && pip install .
+
+# Create work dirs for mounting data/outputs
+RUN mkdir -p /work/in /work/out
+
+# Entrypoint and default command (can be overridden at runtime)
+ENTRYPOINT ["/usr/bin/tini","--"]
+CMD ["python","letterless_eval_all_variants.py","--csv","/work/in/gpqa_diamond_test.csv","--limit","20"]

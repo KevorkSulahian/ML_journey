@@ -56,6 +56,33 @@ export BEDROCK_JUDGE_MODEL_ID=meta.llama3-8b-instruct-v1:0
 
 ---
 
+## Running with Docker
+
+Build the image:
+
+```bash
+docker build -t amg .
+```
+
+Run the harness (make sure your CSV is in `./data` and outputs go to `./runs`):
+
+```bash
+docker run --rm -it ^
+  -e AWS_PROFILE=bedrock-dev ^
+  -e AWS_REGION=us-east-1 ^
+  -e AWS_SDK_LOAD_CONFIG=1 ^
+  -v %USERPROFILE%\.aws:/root/.aws:ro ^
+  -v %cd%\data:/work/in ^
+  -v %cd%\runs:/work/out ^
+  amg ^
+  python bedrock_eval.py --csv /work/in/gpqa_diamond_test.csv --limit 20
+```
+
+That’s it — replace the CSV name/path with your own.
+
+---
+
+
 ## Data format (CSV)
 
 Expected columns:
