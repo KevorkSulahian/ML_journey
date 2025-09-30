@@ -1,0 +1,18 @@
+﻿# environment.yml (pin a stable stack to avoid OpenMP crashes)
+name: base
+channels: [conda-forge, defaults]
+dependencies:
+  - python=3.11
+  - numpy<2.1
+  - scipy<1.14
+  - pandas
+  - ipykernel
+  - ipywidgets
+  - jupyterlab_widgets
+  - mkl
+  - mkl-service
+  - pip
+  - pip:
+      - langchain-nvidia-ai-endpoints
+      - langchain-core
+      - langchain-community

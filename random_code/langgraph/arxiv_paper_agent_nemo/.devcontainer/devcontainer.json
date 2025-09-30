@@ -1,0 +1,29 @@
+// .devcontainer/devcontainer.json
+{
+  "name": "ml-notebooks",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "runArgs": ["--shm-size=2g","--gpus=all", "--shm-size=8g"],          // helps with big models
+//   "runArgs": [],
+
+  "features": {
+    // optional: "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "containerEnv": {
+    // safest is to avoid this, but you can toggle while stabilizing
+    "KMP_DUPLICATE_LIB_OK": "TRUE"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "jupyter.widgetScriptSources": ["local", "unpkg", "jsdelivr"]
+      },
+      "extensions": [
+        "ms-toolsai.jupyter",
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+      ]
+    }
+  }
+}
