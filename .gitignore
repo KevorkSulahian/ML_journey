@@ -30,3 +30,4 @@ random_code/NM/results_nouns
 random_code/aws/answer-matcher-gaming/__pycache__/rulebook.cpython-310.pyc
 random_code/langgraph/checkpoints.db
 random_code/langgraph/essay_writer.ipynb
+random_code/youtube_sentiment_plugin/*
