@@ -31,3 +31,13 @@ random_code/aws/answer-matcher-gaming/__pycache__/rulebook.cpython-310.pyc
 random_code/langgraph/checkpoints.db
 random_code/langgraph/essay_writer.ipynb
 random_code/youtube_sentiment_plugin/*
+random_code/llm_eval/mlflow/.python-version
+random_code/llm_eval/mlflow/uv.lock
+random_code/llm_eval/mlflow/pyproject.toml
+random_code/llm_eval/mlflow_project/.python-version
+random_code/llm_eval/mlflow_project/mlflow.db
+random_code/llm_eval/mlflow_project/pyproject.toml
+random_code/llm_eval/mlflow_project/README.md
+random_code/llm_eval/mlflow_project/requirements.txt
+random_code/llm_eval/mlflow_project/uv.lock
+random_code/llm_eval/mlflow_project/mlruns/1/*
