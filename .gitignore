@@ -1,43 +1,41 @@
-.vscode/c_cpp_properties.json
-random_code/demaned_forecast_kaggle/sample_submission_pzljTaX.csv
-random_code/demaned_forecast_kaggle/test_nfaJ3J5.csv
-random_code/demaned_forecast_kaggle/train_0irEZ2H.csv.zip
-random_code/demaned_forecast_kaggle/train.csv
-random_code/crewai/agentic_sales_pipeline/.env".env" 
-random_code/crewai/video_analysis/uv.lock
-random_code/movie_recommendations
+# Environment files
 .env
+random_code/crewai/agentic_sales_pipeline/.env
+
+# IDE and editor settings
+.vscode/
 .DS_Store
-articles/math.valid
-articles/cc-index.csv
-articles/math.train
-articles/model/math-classifier.bin
-articles/demystifying-deepseekmaths/cc-index.csv
-articles/demystifying-deepseekmaths/math.train
-.gitignore
-articles/demystifying-deepseekmaths/math.valid
-articles/demystifying-deepseekmaths/pass1-math.jsonl
-articles/demystifying-deepseekmaths/model/math-classifier.bin
-unsloth_compiled_cache
-synthetic_data_kit_config.yaml
-random_code/LLM_from_scratch/chapter_5/train.py
+
+# Build artifacts
+unsloth_compiled_cache/
 random_code/LLM_from_scratch/chapter_5/model.pth
 random_code/LLM_from_scratch/chapter_5/loss.pdf
+random_code/LLM_from_scratch/chapter_5/train.py
 random_code/LLM_from_scratch/chapter_5/the-verdict.txt
-random_code/NM/results_full
-random_code/NM/results_tokens
-random_code/NM/results_nouns
-random_code/aws/answer-matcher-gaming/__pycache__/rulebook.cpython-310.pyc
+
+# Dataset files
+*.csv
+*.csv.zip
+articles/math.train
+articles/math.valid
+articles/cc-index.csv
+articles/demystifying-deepseekmaths/cc-index.csv
+articles/demystifying-deepseekmaths/math.train
+articles/demystifying-deepseekmaths/math.valid
+articles/demystifying-deepseekmaths/pass1-math.jsonl
+
+# Model files
+articles/model/
+articles/demystifying-deepseekmaths/model/
+
+# Cache and temporary files
+__pycache__/
+*.lock
 random_code/langgraph/checkpoints.db
-random_code/langgraph/essay_writer.ipynb
-random_code/youtube_sentiment_plugin/*
-random_code/llm_eval/mlflow/.python-version
 random_code/llm_eval/mlflow/uv.lock
-random_code/llm_eval/mlflow/pyproject.toml
-random_code/llm_eval/mlflow_project/.python-version
-random_code/llm_eval/mlflow_project/mlflow.db
-random_code/llm_eval/mlflow_project/pyproject.toml
-random_code/llm_eval/mlflow_project/README.md
-random_code/llm_eval/mlflow_project/requirements.txt
 random_code/llm_eval/mlflow_project/uv.lock
 random_code/llm_eval/mlflow_project/mlruns/1/*
+
+# Miscellaneous
+synthetic_data_kit_config.yaml
+random_code/NM/results_*
