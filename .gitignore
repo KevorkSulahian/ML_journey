@@ -16,6 +16,7 @@ random_code/LLM_from_scratch/chapter_5/the-verdict.txt
 # Dataset files
 *.csv
 *.csv.zip
+*.txt
 articles/math.train
 articles/math.valid
 articles/cc-index.csv
