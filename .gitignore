@@ -40,3 +40,4 @@ random_code/llm_eval/mlflow_project/mlruns/1/*
 # Miscellaneous
 synthetic_data_kit_config.yaml
 random_code/NM/results_*
+random_code/lancedb/data/*
