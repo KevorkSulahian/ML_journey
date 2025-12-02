@@ -32,14 +32,224 @@ kevorksulahian-ml_journey/
 ├── README.md
 ├── articles/
 ├── C/
+├── imgs/
 ├── Karapathy/
-└── random_code/
+├── random_code/
+└── resume/
 ```
 <details>
 <summary>🔽 Expand full tree</summary>
 
 ```text
-(Full directory tree here…)
+kevorksulahian-ml_journey/
+├── README.md
+├── articles/
+│   ├── README.md
+│   └── demystifying-deepseekmaths/
+│       ├── deepseek_fasttext.ipynb
+│       └── deepseek_fasttext.md
+├── C/
+│   ├── chapter_1/
+│   │   ├── build/
+│   │   ├── Celsius-Fahrenheit
+│   │   ├── Celsius-Fahrenheit.c
+│   │   ├── char_counter.c
+│   │   ├── Fahrenheit-Celsius
+│   │   ├── Fahrenheit-Celsius.c
+│   │   ├── file_copy
+│   │   ├── file_copy.c
+│   │   ├── hello
+│   │   ├── hello.c
+│   │   ├── num_occ
+│   │   └── num_occ.c
+│   ├── chapter_2/
+│   │   ├── 2.2.c
+│   │   ├── sum_avg.c
+│   │   └── to_lower.c
+│   ├── chapter_3/
+│   │   ├── calc.c
+│   │   ├── expand.c
+│   │   └── itob.c
+│   ├── chapter_4/
+│   │   └── excercise.c
+│   ├── chapter_5/
+│   │   ├── find_patern.c
+│   │   ├── find_pattern.exe
+│   │   ├── get_int.c
+│   │   ├── get_int.exe
+│   │   ├── lbs290
+│   │   └── lbs290.c
+│   ├── chapter_6/
+│   │   ├── date.c
+│   │   ├── dll.c
+│   │   └── make_and_find_linkedlist.c
+│   ├── chapter_7/
+│   │   ├── ex1.c
+│   │   └── ex2.c
+│   ├── first_project/
+│   │   ├── main.c
+│   │   ├── main.exe
+│   │   └── test.txt
+│   └── function_testing/
+│       ├── main.c
+│       ├── math_functions.c
+│       ├── math_functions.h
+│       └── program
+├── imgs/
+│   └── bishopDL.jpg
+├── Karapathy/
+│   ├── GPT_from_scratch/
+│   │   ├── bigram.ipynb
+│   │   ├── BLT.ipynb
+│   │   ├── gpt-dev.ipynb
+│   │   ├── input.txt
+│   │   └── token.ipynb
+│   ├── gpt-2/
+│   │   ├── hellaswag.py
+│   │   ├── play.ipynb
+│   │   └── train_gpt2.py
+│   └── makemore/
+│       └── 1.ipynb
+├── random_code/
+│   ├── a2a-samples/
+│   ├── algoverse/
+│   │   ├── micro_grad_code.ipynb
+│   │   ├── section-1-evaluations.ipynb
+│   │   └── section-2-interpretability.ipynb
+│   ├── aws/
+│   │   ├── amazon-bedrock-workshop/
+│   │   ├── answer-matcher-gaming/
+│   │   │   ├── bedrock_eval.py
+│   │   │   ├── chroma_rules/
+│   │   │   ├── data/
+│   │   │   ├── dockerfile
+│   │   │   ├── pyproject.toml
+│   │   │   ├── README.md
+│   │   │   ├── rulebook.py
+│   │   │   └── rulebook.toml
+│   │   └── aws_testing.ipynb
+│   ├── chonkie/
+│   │   └── first_attempt.ipynb
+│   ├── crewai/
+│   │   ├── agentic_sales_pipeline/
+│   │   │   ├── code.ipynb
+│   │   │   ├── configs/
+│   │   │   └── crewai_flow.html
+│   │   ├── ai_news/
+│   │   │   ├── news/
+│   │   │   ├── pyproject.toml
+│   │   │   ├── README.md
+│   │   │   ├── src/
+│   │   │   └── uv.lock
+│   │   ├── Dockerfile
+│   │   ├── fastapi_app/
+│   │   │   ├── app/
+│   │   │   └── requirements.txt
+│   │   ├── fastapi_crew/
+│   │   │   ├── knowledge/
+│   │   │   ├── pyproject.toml
+│   │   │   ├── README.md
+│   │   │   ├── src/
+│   │   │   └── uv.lock
+│   │   ├── meeting_minutes/
+│   │   │   ├── pyproject.toml
+│   │   │   ├── README.md
+│   │   │   └── src/
+│   │   ├── video_analysis/
+│   │   │   ├── knowledge/
+│   │   │   ├── pyproject.toml
+│   │   │   ├── README.md
+│   │   │   ├── src/
+│   │   │   ├── uv.lock
+│   │   │   ├── video.mp3
+│   │   │   └── video.mp4
+│   │   └── video_with_gpt/
+│   │       ├── pyproject.toml
+│   │       ├── README.md
+│   │       ├── result.txt
+│   │       └── src/
+│   ├── demaned_forecast_kaggle/
+│   │   └── code.ipynb
+│   ├── docker/
+│   │   ├── fastapi/
+│   │   │   ├── compose.yaml
+│   │   │   ├── Dockerfile
+│   │   │   ├── main.py
+│   │   │   ├── model_starter.py
+│   │   │   ├── README.Docker.md
+│   │   │   ├── requirements.txt
+│   │   │   └── test_call.py
+│   │   └── simple/
+│   │       ├── Dockerfile
+│   │       └── main.py
+│   ├── dpsy/
+│   │   └── first_try.ipynb
+│   ├── fastapi/
+│   │   ├── basic/
+│   │   │   └── main.py
+│   │   └── vercel/
+│   ├── finbert sentiment analysis/
+│   │   └── code.ipynb
+│   ├── hf/
+│   │   └── small_course/
+│   │       └── chapter_1/
+│   ├── lancedb/
+│   │   ├── cohere_reranker.ipynb
+│   │   ├── data/
+│   │   └── requirements.txt
+│   ├── langgraph/
+│   │   ├── arxiv_paper_agent_nemo/
+│   │   └── react.ipynb
+│   ├── llm_eval/
+│   │   ├── logprob_learnings.ipynb
+│   │   └── ragas.ipynb
+│   ├── LLM_from_scratch/
+│   │   ├── chapter_2/
+│   │   ├── chapter_3/
+│   │   ├── chapter_4/
+│   │   └── chapter_5/
+│   ├── mcp/
+│   │   ├── proj_1/
+│   │   └── proj_2/
+│   ├── mlz/
+│   │   ├── 1/
+│   │   ├── 2/
+│   │   ├── 3/
+│   │   └── 4/
+│   ├── neofetch/
+│   │   ├── main.py
+│   │   ├── mine.png
+│   │   └── README.md
+│   ├── news_hub/
+│   │   ├── app.py
+│   │   ├── static/
+│   │   └── templates/
+│   ├── NM/
+│   │   ├── code_algo_eval.ipynb
+│   │   ├── code.ipynb
+│   │   ├── nlm_quoraQuestions_WeightedWords_Tokenization.ipynb
+│   │   └── train.csv.zip
+│   ├── openai_video_process/
+│   │   ├── process_video.ipynb
+│   │   ├── video.mp3
+│   │   └── video.mp4
+│   ├── quick_codes/
+│   │   ├── assistant.py
+│   │   ├── quick_access.ipynb
+│   │   └── testing_in_notebooks.ipynb
+│   ├── rag/
+│   │   └── semantic cache.ipynb
+│   ├── smol_course/
+│   │   ├── dpo_finetuning_example.ipynb
+│   │   ├── orpo_finetuning_example.ipynb
+│   │   ├── sft_peft.ipynb
+│   │   └── smol_agent.ipynb
+│   ├── time_series/
+│   │   └── timesfm/
+│   ├── unsloth/
+│   │   └── llama_synthdata_finetune.ipynb
+└── resume/
+    └── Kevork Sulahian.pdf
 ```
 </details>
 
