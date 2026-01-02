@@ -1,0 +1,2 @@
+[submodule "random_code/basketball/segment-anything-2-real-time"]
+	ignore = dirty
