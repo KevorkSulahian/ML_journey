@@ -50,6 +50,7 @@ README_files/*
 random_code/basketball/__pycache__/
 random_code/basketball/basketball-player-detection-2-13/*
 random_code/basketball/basketball-player-detection-2-13
+random_code/basketball/segment-anything-2-real-time*
 random_code/basketball/rf-detr-medium.pth
 random_code/basketball/output/*
 random_code/basketball/dog-2.jpeg
