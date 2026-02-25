@@ -5,6 +5,7 @@ random_code/crewai/agentic_sales_pipeline/.env
 # IDE and editor settings
 .vscode/
 .DS_Store
+.cursor/
 
 # Build artifacts
 unsloth_compiled_cache/
