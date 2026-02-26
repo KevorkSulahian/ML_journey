@@ -98,6 +98,7 @@ Training LLMs on GPU Clusters](https://huggingface.co/spaces/nanotron/ultrascale
 - [Deep Learning for Molecules](https://dmol.pub/)
 - [Flow Matching And Diffusion model](https://diffusion.csail.mit.edu/2026/docs/lecture_notes.pdf)
     - [Lab](https://github.com/eje24/iap-diffusion-labs)
+- [Deep Gen Models course](https://kuleshov-group.github.io/dgm-website/)
 
 ## Maintenance Rule for This File
 
