@@ -27,5 +27,6 @@ This folder tracks writing and article-related work connected to the projects in
 - More postmortem-style notes (what worked / failed / changed)
 - Tighter links between repo code and published articles
 
-## Ideas
-- A similar one to [this](https://bhavishyapandit9.substack.com/p/10-genaiml-questions-to-crack-ai)
+# Talk Slides
+
+- [Operationalizing Evaluations](https://docs.google.com/presentation/d/1RXBZm2GCDTgRz51nE3q8xrKXZsIVZaJk/edit?usp=sharing&ouid=100878051659723077821&rtpof=true&sd=true)
