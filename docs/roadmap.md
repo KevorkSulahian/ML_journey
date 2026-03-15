@@ -20,6 +20,8 @@ It is split by outcomes so it reads more like a technical growth plan than a boo
 - [FineWeb](https://huggingface.co/spaces/HuggingFaceFW/blogpost-fineweb-v1)
 - [torch.compile (missing manual)](https://docs.google.com/document/d/1y5CRfMLdwEoF1nTk9q8qEu1mgMUuUtvhklPKJ2emLU8/edit?tab=t.0#heading=h.66t0x3z84jio)
 - [Build a GenAI platform](https://huyenchip.com/2024/07/25/genai-platform.html)
+- [Advanved RAG Course](https://www.youtube.com/watch?v=_kpxLkH5vY0)
+- [intro to MCP Servers](https://www.youtube.com/watch?v=DosHnyq78xY&t=114s)
 
 ## Ideas
 
@@ -86,6 +88,12 @@ Training LLMs on GPU Clusters](https://huggingface.co/spaces/nanotron/ultrascale
 - [AWS Project ToolKit](https://yourclouddude.gumroad.com/l/ieexsy?layout=profile)
     - [Full Version](https://decisive-busby-f78.notion.site/AWS-Project-Toolkit-23487b3fcaea8081a64effc9634cc62c)
 - [Cloud Launchpad: AWS Essentials](https://yourclouddude.gumroad.com/l/exunef?layout=profile)
+- [amazon-bedrock-agentcore-samples](https://github.com/awslabs/amazon-bedrock-agentcore-samples)
+
+### Robotics
+
+- [Multimodality in Robotics. How to predict correct and diverse continuous robot actions](https://www.youtube.com/watch?v=6oZe_tKE3YA)
+
 
 ### Other
 - [🍷 FineWeb: decanting the web for the finest text data at scale](https://huggingface.co/spaces/HuggingFaceFW/blogpost-fineweb-v1) Learning to Create a Dataset.
@@ -99,6 +107,7 @@ Training LLMs on GPU Clusters](https://huggingface.co/spaces/nanotron/ultrascale
 - [Flow Matching And Diffusion model](https://diffusion.csail.mit.edu/2026/docs/lecture_notes.pdf)
     - [Lab](https://github.com/eje24/iap-diffusion-labs)
 - [Deep Gen Models course](https://kuleshov-group.github.io/dgm-website/)
+- [Kaggle Data Science Competition Course](https://www.youtube.com/watch?v=BV03sQ0srcU)
 
 ## Maintenance Rule for This File
 

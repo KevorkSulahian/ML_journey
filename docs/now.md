@@ -23,3 +23,8 @@ What I am actively working on or studying right now.
 ## Ongoing Habit
 
 - Document the work, not just the outcome (code + short write-up + what changed)
+
+
+### Work related Activities
+
+- VLA Policies [video list](https://www.youtube.com/playlist?list=PLaqgu2SjelC6yZprhmbkLZUGXw3njRxME)
