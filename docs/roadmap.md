@@ -44,6 +44,8 @@ It is split by outcomes so it reads more like a technical growth plan than a boo
 - [Post training 101](https://tokens-for-thoughts.notion.site/post-training-101)
 - [The Smol Training Playbook:
 The Secrets to Building World-Class LLMs](https://huggingface.co/spaces/HuggingFaceTB/smol-training-playbook)
+- [Flow Matching Guide and Code](https://arxiv.org/abs/2412.06264)
+- [Step-by-Step Diffusion: An Elementary Tutorial](https://arxiv.org/abs/2406.08929)
 
 
 
