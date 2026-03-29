@@ -91,3 +91,7 @@ random_code/basketball/source/boston-celtics-new-york-knicks-game-1-q2-10.36-10.
 random_code/LLM_from_scratch/chapter_5/chp5.ipynb
 random_code/basketball/segment-anything-2-real-time
 /random_code/unsloth/nemo_sudoku/myenv
+random_code/unsloth/nemo_sudoku/.codex
+random_code/unsloth/nemo_sudoku/nemo_gym_sudoku_finetune_4bit
+random_code/unsloth/nemo_sudoku/outputs
+random_code/unsloth/nemo_sudoku/outputs_debug
