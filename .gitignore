@@ -1,6 +1,6 @@
 # Environment files
 .env
-random_code/crewai/agentic_sales_pipeline/.env
+learning_materials/crewai/agentic_sales_pipeline/.env
 
 # IDE and editor settings
 .vscode/
@@ -9,10 +9,10 @@ random_code/crewai/agentic_sales_pipeline/.env
 
 # Build artifacts
 unsloth_compiled_cache/
-random_code/LLM_from_scratch/chapter_5/model.pth
-random_code/LLM_from_scratch/chapter_5/loss.pdf
-random_code/LLM_from_scratch/chapter_5/train.py
-random_code/LLM_from_scratch/chapter_5/the-verdict.txt
+learning_materials/LLM_from_scratch/chapter_5/model.pth
+learning_materials/LLM_from_scratch/chapter_5/loss.pdf
+learning_materials/LLM_from_scratch/chapter_5/train.py
+learning_materials/LLM_from_scratch/chapter_5/the-verdict.txt
 
 # Dataset files
 *.csv
@@ -33,65 +33,65 @@ articles/demystifying-deepseekmaths/model/
 # Cache and temporary files
 __pycache__/
 *.lock
-random_code/langgraph/checkpoints.db
-random_code/llm_eval/mlflow/uv.lock
-random_code/llm_eval/mlflow_project/uv.lock
-random_code/llm_eval/mlflow_project/mlruns/1/*
+learning_materials/langgraph/checkpoints.db
+learning_materials/llm_eval/mlflow/uv.lock
+learning_materials/llm_eval/mlflow_project/uv.lock
+learning_materials/llm_eval/mlflow_project/mlruns/1/*
 
 # Miscellaneous
 synthetic_data_kit_config.yaml
-random_code/NM/results_*
-random_code/lancedb/data/*
+learning_materials/NM/results_*
+learning_materials/lancedb/data/*
 README.html
 .gitignore
 README_files/*
 
 
 # random
-random_code/basketball/__pycache__/
-random_code/basketball/basketball-player-detection-2-13/*
-random_code/basketball/basketball-player-detection-2-13
-random_code/basketball/segment-anything-2-real-time
-random_code/basketball/rf-detr-medium.pth
-random_code/basketball/output/*
-random_code/basketball/dog-2.jpeg
-random_code/basketball/dog-3.jpeg
-random_code/basketball/segment-anything-2-real-time
-random_code/LLM_from_scratch/chapter_5/chp5.ipynb
-random_code/LLM_from_scratch/README.md
-random_code/LLM_from_scratch/pyproject.toml
-random_code/LLM_from_scratch/main.py
-random_code/LLM_from_scratch/.python-version
+learning_materials/basketball/__pycache__/
+learning_materials/basketball/basketball-player-detection-2-13/*
+learning_materials/basketball/basketball-player-detection-2-13
+learning_materials/basketball/segment-anything-2-real-time
+learning_materials/basketball/rf-detr-medium.pth
+learning_materials/basketball/output/*
+learning_materials/basketball/dog-2.jpeg
+learning_materials/basketball/dog-3.jpeg
+learning_materials/basketball/segment-anything-2-real-time
+learning_materials/LLM_from_scratch/chapter_5/chp5.ipynb
+learning_materials/LLM_from_scratch/README.md
+learning_materials/LLM_from_scratch/pyproject.toml
+learning_materials/LLM_from_scratch/main.py
+learning_materials/LLM_from_scratch/.python-version
 .venv
 .venv/
-random_code/basketball/.python-version
-random_code/basketball/boston-celtics-new-york-knicks-game-1-q1-04.28-04.20-detection.mp4
-random_code/basketball/boston-celtics-new-york-knicks-game-1-q1-04.28-04.20-map.mp4
-random_code/basketball/boston-celtics-new-york-knicks-game-1-q1-04.28-04.20-mask.mp4
-random_code/basketball/boston-celtics-new-york-knicks-game-1-q1-04.28-04.20-result.mp4
-random_code/basketball/boston-celtics-new-york-knicks-game-1-q1-04.28-04.20-teams.mp4
-random_code/basketball/boston-celtics-new-york-knicks-game-1-q1-04.28-04.20-validated-numbers.mp4
-random_code/basketball/pyproject.toml
-random_code/basketball/segment-anything-2-real-time
-random_code/basketball/basketball.egg-info/PKG-INFO
-random_code/basketball/fonts/Bayon-Regular.ttf
-random_code/basketball/fonts/ConcertOne-Regular.ttf
-random_code/basketball/fonts/SquadaOne-Regular.ttf
-random_code/basketball/fonts/Staatliches-Regular.ttf
-random_code/basketball/source/boston-celtics-new-york-knicks-game-1-q1-01.54-01.48.mp4
-random_code/basketball/source/boston-celtics-new-york-knicks-game-1-q1-03.16-03.11.mp4
-random_code/basketball/source/boston-celtics-new-york-knicks-game-1-q1-04.28-04.20.mp4
-random_code/basketball/source/boston-celtics-new-york-knicks-game-1-q1-04.44-04.39.mp4
-random_code/basketball/source/boston-celtics-new-york-knicks-game-1-q1-05.13-05.09.mp4
-random_code/basketball/source/boston-celtics-new-york-knicks-game-1-q1-06.00-05.54.mp4
-random_code/basketball/source/boston-celtics-new-york-knicks-game-1-q1-07.41-07.34.mp4
-random_code/basketball/source/boston-celtics-new-york-knicks-game-1-q2-08.09-08.03.mp4
-random_code/basketball/source/boston-celtics-new-york-knicks-game-1-q2-08.43-08.38.mp4
-random_code/basketball/source/boston-celtics-new-york-knicks-game-1-q2-10.36-10.32.mp4
-random_code/LLM_from_scratch/chapter_5/chp5.ipynb
-random_code/basketball/segment-anything-2-real-time
-/random_code/unsloth/nemo_sudoku/myenv
-random_code/unsloth/nemo_sudoku/.codex
-random_code/unsloth/nemo_sudoku/nemo_gym_sudoku_finetune_4bit
-random_code/unsloth/nemo_sudoku/outputs
-random_code/unsloth/nemo_sudoku/outputs_debug
+learning_materials/basketball/.python-version
+learning_materials/basketball/boston-celtics-new-york-knicks-game-1-q1-04.28-04.20-detection.mp4
+learning_materials/basketball/boston-celtics-new-york-knicks-game-1-q1-04.28-04.20-map.mp4
+learning_materials/basketball/boston-celtics-new-york-knicks-game-1-q1-04.28-04.20-mask.mp4
+learning_materials/basketball/boston-celtics-new-york-knicks-game-1-q1-04.28-04.20-result.mp4
+learning_materials/basketball/boston-celtics-new-york-knicks-game-1-q1-04.28-04.20-teams.mp4
+learning_materials/basketball/boston-celtics-new-york-knicks-game-1-q1-04.28-04.20-validated-numbers.mp4
+learning_materials/basketball/pyproject.toml
+learning_materials/basketball/segment-anything-2-real-time
+learning_materials/basketball/basketball.egg-info/PKG-INFO
+learning_materials/basketball/fonts/Bayon-Regular.ttf
+learning_materials/basketball/fonts/ConcertOne-Regular.ttf
+learning_materials/basketball/fonts/SquadaOne-Regular.ttf
+learning_materials/basketball/fonts/Staatliches-Regular.ttf
+learning_materials/basketball/source/boston-celtics-new-york-knicks-game-1-q1-01.54-01.48.mp4
+learning_materials/basketball/source/boston-celtics-new-york-knicks-game-1-q1-03.16-03.11.mp4
+learning_materials/basketball/source/boston-celtics-new-york-knicks-game-1-q1-04.28-04.20.mp4
+learning_materials/basketball/source/boston-celtics-new-york-knicks-game-1-q1-04.44-04.39.mp4
+learning_materials/basketball/source/boston-celtics-new-york-knicks-game-1-q1-05.13-05.09.mp4
+learning_materials/basketball/source/boston-celtics-new-york-knicks-game-1-q1-06.00-05.54.mp4
+learning_materials/basketball/source/boston-celtics-new-york-knicks-game-1-q1-07.41-07.34.mp4
+learning_materials/basketball/source/boston-celtics-new-york-knicks-game-1-q2-08.09-08.03.mp4
+learning_materials/basketball/source/boston-celtics-new-york-knicks-game-1-q2-08.43-08.38.mp4
+learning_materials/basketball/source/boston-celtics-new-york-knicks-game-1-q2-10.36-10.32.mp4
+learning_materials/LLM_from_scratch/chapter_5/chp5.ipynb
+learning_materials/basketball/segment-anything-2-real-time
+/learning_materials/unsloth/nemo_sudoku/myenv
+learning_materials/unsloth/nemo_sudoku/.codex
+learning_materials/unsloth/nemo_sudoku/nemo_gym_sudoku_finetune_4bit
+learning_materials/unsloth/nemo_sudoku/outputs
+learning_materials/unsloth/nemo_sudoku/outputs_debug
