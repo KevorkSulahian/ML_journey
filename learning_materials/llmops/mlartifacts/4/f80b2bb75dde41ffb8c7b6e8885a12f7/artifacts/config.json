@@ -1,0 +1,6 @@
+{
+  "name": "baseline",
+  "model": "gpt-5-mini",
+  "temperature": 1.0,
+  "system_prompt": "You are a helpful assistant."
+}

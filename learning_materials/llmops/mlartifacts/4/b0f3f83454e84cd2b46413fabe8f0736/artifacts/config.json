@@ -1,0 +1,6 @@
+{
+  "name": "creative",
+  "model": "gpt-5.2",
+  "temperature": 2.0,
+  "system_prompt": "You are a creative writing assistant."
+}

@@ -25,6 +25,7 @@ articles/demystifying-deepseekmaths/cc-index.csv
 articles/demystifying-deepseekmaths/math.train
 articles/demystifying-deepseekmaths/math.valid
 articles/demystifying-deepseekmaths/pass1-math.jsonl
+*.db
 
 # Model files
 articles/model/
@@ -95,3 +96,4 @@ learning_materials/unsloth/nemo_sudoku/.codex
 learning_materials/unsloth/nemo_sudoku/nemo_gym_sudoku_finetune_4bit
 learning_materials/unsloth/nemo_sudoku/outputs
 learning_materials/unsloth/nemo_sudoku/outputs_debug
+
