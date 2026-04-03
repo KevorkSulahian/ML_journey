@@ -22,6 +22,7 @@ It is split by outcomes so it reads more like a technical growth plan than a boo
 - [Build a GenAI platform](https://huyenchip.com/2024/07/25/genai-platform.html)
 - [Advanved RAG Course](https://www.youtube.com/watch?v=_kpxLkH5vY0)
 - [intro to MCP Servers](https://www.youtube.com/watch?v=DosHnyq78xY&t=114s)
+- [SSD make llm faster](https://arxiv.org/pdf/2603.03251)
 
 ## Ideas
 
