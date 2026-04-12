@@ -21,6 +21,11 @@ from dotenv import load_dotenv
 import dspy
 
 try:
+    from datasets import load_dataset
+except ImportError:
+    load_dataset = None
+
+try:
     from tavily import TavilyClient
 except ImportError:
     TavilyClient = None
@@ -92,7 +97,7 @@ LEGAL_SOURCE_THRESHOLDS = {
 ARTIFACT_OUTPUT = "output/legal_research_artifact.json"
 REPORT_OUTPUT = "output/legal_research_memo.md"
 
-legal_research_request = {
+manual_legal_research_request = {
     "legal_question": "What negligence arguments are strongest for the injured plaintiff, and what counterarguments is the defendant likely to raise?",
     "fact_pattern": "A delivery company sent a driver to a downtown office tower during a heavy rainstorm. The building owner knew for weeks that the marble lobby floor became extremely slick when water pooled near the main entrance, and staff had previously reported two near-falls. On the day of the accident, no warning signs or mats were placed near the doorway. A visitor entering the lobby slipped, fractured her wrist, and missed six weeks of work. The building owner argues that the danger was open and obvious because it was raining and the visitor should have watched where she was going.",
     "jurisdiction": "United States (Federal)",
@@ -104,8 +109,84 @@ legal_research_request = {
     "budget_mode": "deep",
 }
 
+DATASET_INPUT_CONFIG = {
+    "enabled": True,
+    "split": "test",
+    "question_contains": "American law",
+    "row_index": 0,
+}
+
+
+def load_lexam_request() -> tuple[dict[str, Any], dict[str, Any]]:
+    if not DATASET_INPUT_CONFIG["enabled"]:
+        return manual_legal_research_request, {
+            "request_source": "manual",
+            "reason": "Dataset input disabled.",
+        }
+
+    if load_dataset is None:
+        return manual_legal_research_request, {
+            "request_source": "manual",
+            "reason": "datasets library is unavailable; using manual fallback.",
+        }
+
+    dataset = load_dataset("LEXam-Benchmark/LEXam", "open_question", split=DATASET_INPUT_CONFIG["split"])
+    matching_rows = [
+        row
+        for row in dataset
+        if row.get("language") == "en"
+        and DATASET_INPUT_CONFIG["question_contains"].lower() in (row.get("question") or "").lower()
+    ]
+    if not matching_rows:
+        return manual_legal_research_request, {
+            "request_source": "manual",
+            "reason": "No matching LEXam rows found; using manual fallback.",
+        }
+
+    selected_row = matching_rows[DATASET_INPUT_CONFIG["row_index"]]
+    question = (selected_row.get("question") or "").strip()
+    request = {
+        "legal_question": question,
+        "fact_pattern": question,
+        "jurisdiction": "United States (Federal)",
+        "requested_work_product": "legal_memo",
+        "known_issues": [value for value in [selected_row.get("course"), selected_row.get("area")] if value],
+        "preferred_authority_types": ["cases", "statutes", "regulations"],
+        "allowed_domains": [],
+        "allow_tavily_fallback": True,
+        "budget_mode": manual_legal_research_request["budget_mode"],
+        "reference_answer": selected_row.get("answer"),
+        "dataset_source": {
+            "provider": "LEXam-Benchmark/LEXam",
+            "config": "open_question",
+            "split": DATASET_INPUT_CONFIG["split"],
+            "id": selected_row.get("id"),
+            "course": selected_row.get("course"),
+            "language": selected_row.get("language"),
+            "area": selected_row.get("area"),
+            "raw_jurisdiction": selected_row.get("jurisdiction"),
+            "year": selected_row.get("year"),
+        },
+    }
+    return request, {
+        "request_source": "lexam",
+        "dataset": request["dataset_source"],
+    }
+
+
+legal_research_request, request_source_metadata = load_lexam_request()
+
 budget = BUDGETS[legal_research_request["budget_mode"]]
-print(json.dumps(legal_research_request, indent=2))
+print(
+    json.dumps(
+        {
+            "request_source_metadata": request_source_metadata,
+            "legal_research_request": legal_research_request,
+        },
+        indent=2,
+        ensure_ascii=False,
+    )
+)
 
 # %%
 @dataclass
@@ -1085,6 +1166,7 @@ def run_legal_research(request: dict[str, Any]) -> dict[str, Any]:
     citation_lookup = run_citation_lookup(annotated_memo)
 
     return {
+        "request_source_metadata": request_source_metadata,
         "legal_research_request": request,
         "issues_to_research": issues_to_research,
         "artifacts": artifacts,
