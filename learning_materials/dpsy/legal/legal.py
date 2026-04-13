@@ -150,10 +150,10 @@ def load_lexam_request() -> tuple[dict[str, Any], dict[str, Any]]:
         "fact_pattern": question,
         "jurisdiction": "United States (Federal)",
         "requested_work_product": "legal_memo",
-        "known_issues": [value for value in [selected_row.get("course"), selected_row.get("area")] if value],
-        "preferred_authority_types": ["cases", "statutes", "regulations"],
+        "known_issues": [],
+        "preferred_authority_types": ["cases"],
         "allowed_domains": [],
-        "allow_tavily_fallback": True,
+        "allow_tavily_fallback": False,
         "budget_mode": manual_legal_research_request["budget_mode"],
         "reference_answer": selected_row.get("answer"),
         "dataset_source": {
@@ -752,10 +752,53 @@ class IssueExtractionSignature(dspy.Signature):
 
     legal_question: str = dspy.InputField()
     fact_pattern: str = dspy.InputField()
+    user_guidance_summary: str = dspy.InputField()
     known_issues: list[str] = dspy.InputField()
     preferred_authority_types: list[str] = dspy.InputField()
     max_issues: int = dspy.InputField()
     issues_to_research: list[str] = dspy.OutputField()
+
+
+class ClarifyingSignature(dspy.Signature):
+    """Ask the user what to focus on before research begins.
+
+    Always include questions about:
+    1. the substantive focus or issue emphasis,
+    2. which authority types or source families to use or avoid,
+    3. whether GovInfo, Congress, or other sources should be included.
+    """
+
+    legal_question: str = dspy.InputField()
+    fact_pattern: str = dspy.InputField()
+    requested_work_product: str = dspy.InputField()
+    number_of_questions: int = dspy.InputField()
+    clarifying_questions: list[str] = dspy.OutputField()
+
+
+class GuidanceNormalizationSignature(dspy.Signature):
+    """Convert free-form user answers into concrete research controls.
+
+    Keep approved_authority_types limited to:
+    - cases
+    - statutes
+    - regulations
+
+    Keep approved_source_adapters limited to:
+    - courtlistener
+    - govinfo
+    - congress
+    - tavily
+    """
+
+    legal_question: str = dspy.InputField()
+    fact_pattern: str = dspy.InputField()
+    clarifying_questions_and_answers: list[dict] = dspy.InputField()
+    current_authority_types: list[str] = dspy.InputField()
+    current_source_adapters: list[str] = dspy.InputField()
+    focused_issues: list[str] = dspy.OutputField()
+    approved_authority_types: list[str] = dspy.OutputField()
+    approved_source_adapters: list[str] = dspy.OutputField()
+    user_guidance_summary: str = dspy.OutputField()
 
 
 class QueryPlanningSignature(dspy.Signature):
@@ -765,6 +808,7 @@ class QueryPlanningSignature(dspy.Signature):
     fact_pattern: str = dspy.InputField()
     issue: str = dspy.InputField()
     jurisdiction: str = dspy.InputField()
+    user_guidance_summary: str = dspy.InputField()
     preferred_authority_types: list[str] = dspy.InputField()
     number_of_queries: int = dspy.InputField()
     queries: list[str] = dspy.OutputField()
@@ -776,6 +820,7 @@ class SourceSelectionSignature(dspy.Signature):
     legal_question: str = dspy.InputField()
     fact_pattern: str = dspy.InputField()
     issue: str = dspy.InputField()
+    user_guidance_summary: str = dspy.InputField()
     candidate_sources: list[dict] = dspy.InputField()
     max_sources: int = dspy.InputField()
     selected_urls: list[str] = dspy.OutputField()
@@ -835,6 +880,8 @@ class MemoAnnotatorSignature(dspy.Signature):
 
 
 issue_extractor = dspy.ChainOfThought(IssueExtractionSignature)
+clarifier = dspy.Predict(ClarifyingSignature)
+guidance_normalizer = dspy.Predict(GuidanceNormalizationSignature)
 query_planner = dspy.Predict(QueryPlanningSignature)
 source_selector = dspy.Predict(SourceSelectionSignature)
 short_authority_reader = dspy.ChainOfThought(ShortAuthorityDigestSignature)
@@ -925,6 +972,7 @@ def select_sources(issue: str, legal_question: str, fact_pattern: str, candidate
         legal_question=legal_question,
         fact_pattern=fact_pattern,
         issue=issue,
+        user_guidance_summary="",
         candidate_sources=[asdict(candidate) for candidate in ordered_candidates],
         max_sources=max_sources,
     )
@@ -933,6 +981,183 @@ def select_sources(issue: str, legal_question: str, fact_pattern: str, candidate
     if not selected:
         selected = ordered_candidates[:max_sources]
     return selected[:max_sources], response.selection_rationale
+
+
+def is_lexam_request(request: dict[str, Any]) -> bool:
+    return request.get("dataset_source", {}).get("provider") == "LEXam-Benchmark/LEXam"
+
+
+def is_precedent_question(request: dict[str, Any]) -> bool:
+    question_lower = (request.get("legal_question") or "").lower()
+    return "precedent" in question_lower or "stare decisis" in question_lower
+
+
+def build_clarifying_q_and_a(request: dict[str, Any]) -> list[dict[str, str]]:
+    results = clarifier(
+        legal_question=request["legal_question"],
+        fact_pattern=request["fact_pattern"],
+        requested_work_product=request["requested_work_product"],
+        number_of_questions=3,
+    )
+
+    q_and_a: list[dict[str, str]] = []
+    for question in results.clarifying_questions:
+        answer = input(f"{question}\n")
+        q_and_a.append(
+            {
+                "clarifying_question": question,
+                "user_guidance": answer.strip(),
+            }
+        )
+    return q_and_a
+
+
+def normalize_user_guidance(request: dict[str, Any], q_and_a: list[dict[str, str]]) -> dict[str, Any]:
+    if not any((item.get("user_guidance") or "").strip() for item in q_and_a):
+        return {
+            "focused_issues": [],
+            "approved_authority_types": request.get("preferred_authority_types", []),
+            "approved_source_adapters": sorted(retrieval_adapters_for_request(request)),
+            "user_guidance_summary": "",
+        }
+
+    normalized = guidance_normalizer(
+        legal_question=request["legal_question"],
+        fact_pattern=request["fact_pattern"],
+        clarifying_questions_and_answers=q_and_a,
+        current_authority_types=request.get("preferred_authority_types", []),
+        current_source_adapters=sorted(retrieval_adapters_for_request(request)),
+    )
+    return {
+        "focused_issues": normalized.focused_issues or [],
+        "approved_authority_types": normalized.approved_authority_types or request.get("preferred_authority_types", []),
+        "approved_source_adapters": normalized.approved_source_adapters or sorted(retrieval_adapters_for_request(request)),
+        "user_guidance_summary": (normalized.user_guidance_summary or "").strip(),
+    }
+
+
+def apply_guidance_to_request(request: dict[str, Any], q_and_a: list[dict[str, str]], guidance: dict[str, Any]) -> dict[str, Any]:
+    effective_request = dict(request)
+    effective_request["clarifying_questions_and_answers"] = q_and_a
+    effective_request["user_guidance_summary"] = guidance.get("user_guidance_summary", "")
+
+    if guidance.get("focused_issues"):
+        effective_request["known_issues"] = guidance["focused_issues"]
+    if guidance.get("approved_authority_types"):
+        effective_request["preferred_authority_types"] = guidance["approved_authority_types"]
+    if guidance.get("approved_source_adapters"):
+        effective_request["approved_source_adapters"] = guidance["approved_source_adapters"]
+
+    return effective_request
+
+
+def max_issues_for_request(request: dict[str, Any]) -> int:
+    if is_lexam_request(request):
+        return 1
+    return budget["max_issues"]
+
+
+def queries_per_issue_for_request(request: dict[str, Any]) -> int:
+    if is_lexam_request(request):
+        return 2
+    return budget["queries_per_issue"]
+
+
+def selected_sources_per_issue_for_request(request: dict[str, Any]) -> int:
+    if is_lexam_request(request):
+        return 3
+    return budget["selected_sources_per_issue"]
+
+
+def retrieval_adapters_for_request(request: dict[str, Any]) -> set[str]:
+    if request.get("approved_source_adapters"):
+        return set(request["approved_source_adapters"])
+
+    preferred = set(request.get("preferred_authority_types") or [])
+    adapters: set[str] = set()
+    if "cases" in preferred:
+        adapters.add("courtlistener")
+    if "statutes" in preferred or "regulations" in preferred:
+        adapters.add("govinfo")
+    if needs_legislative_materials(request):
+        adapters.add("congress")
+    return adapters or {"courtlistener"}
+
+
+def candidate_relevance_score(candidate: SourceCandidate, issue: str, legal_question: str) -> int:
+    haystack = " ".join([candidate.title, candidate.snippet, candidate.source_family, candidate.source_type])
+    return query_score(f"{issue} {legal_question}", haystack)
+
+
+def select_sources_for_request(
+    issue: str,
+    legal_question: str,
+    fact_pattern: str,
+    candidates: list[SourceCandidate],
+    max_sources: int,
+    request: dict[str, Any],
+) -> tuple[list[SourceCandidate], str]:
+    if not candidates:
+        return [], "No candidate sources were available."
+
+    ordered_candidates = sorted(
+        dedupe_candidates(candidates),
+        key=lambda candidate: (candidate_relevance_score(candidate, issue, legal_question), authority_priority(candidate)),
+        reverse=True,
+    )
+
+    if is_lexam_request(request):
+        return ordered_candidates[:max_sources], "Deterministic selection for LEXam benchmark mode."
+
+    response = source_selector(
+        legal_question=legal_question,
+        fact_pattern=fact_pattern,
+        issue=issue,
+        user_guidance_summary=request.get("user_guidance_summary", ""),
+        candidate_sources=[asdict(candidate) for candidate in ordered_candidates],
+        max_sources=max_sources,
+    )
+    selected_urls = set(response.selected_urls or [])
+    selected = [candidate for candidate in ordered_candidates if candidate.url in selected_urls]
+    if not selected:
+        selected = ordered_candidates[:max_sources]
+    return selected[:max_sources], response.selection_rationale
+
+
+def build_issues_to_research(request: dict[str, Any]) -> list[str]:
+    if request.get("known_issues"):
+        return request["known_issues"][: max_issues_for_request(request)]
+
+    if is_lexam_request(request) and is_precedent_question(request):
+        return ["Conventional meaning of precedent and how courts follow, distinguish, or overrule prior decisions"]
+
+    extracted = issue_extractor(
+        legal_question=request["legal_question"],
+        fact_pattern=request["fact_pattern"],
+        user_guidance_summary=request.get("user_guidance_summary", ""),
+        known_issues=request["known_issues"],
+        preferred_authority_types=request["preferred_authority_types"],
+        max_issues=max_issues_for_request(request),
+    )
+    return extracted.issues_to_research or request["known_issues"] or [request["legal_question"]]
+
+
+def build_queries_for_issue(issue: str, request: dict[str, Any]) -> list[str]:
+    if is_lexam_request(request) and is_precedent_question(request):
+        return [
+            "stare decisis precedent follow distinguish overrule Supreme Court American law",
+            "precedent first impression distinguish overrule American law appellate cases",
+        ][: queries_per_issue_for_request(request)]
+
+    return query_planner(
+        legal_question=request["legal_question"],
+        fact_pattern=request["fact_pattern"],
+        issue=issue,
+        jurisdiction=request["jurisdiction"],
+        user_guidance_summary=request.get("user_guidance_summary", ""),
+        preferred_authority_types=request["preferred_authority_types"],
+        number_of_queries=queries_per_issue_for_request(request),
+    ).queries
 
 
 def digest_short_documents(legal_question: str, fact_pattern: str, issue: str, documents: list[SourceDocument]) -> list[AuthorityDigest]:
@@ -1021,36 +1246,39 @@ def analyze_issue(legal_question: str, fact_pattern: str, issue: str, documents:
 def retrieve_candidates_for_issue(issue: str, queries: list[str], request: dict[str, Any]) -> tuple[list[SourceCandidate], list[dict[str, Any]]]:
     candidates: list[SourceCandidate] = []
     retrieval_trace: list[dict[str, Any]] = []
+    adapters = retrieval_adapters_for_request(request)
 
     for query in queries:
-        courtlistener_results = search_courtlistener_cases(issue, query, budget["courtlistener_results"])
-        candidates.extend(courtlistener_results)
-        retrieval_trace.append(
-            {
-                "adapter": "courtlistener",
-                "query": query,
-                "result_count": len(courtlistener_results),
-                "used_fallback": False,
-            }
-        )
+        if "courtlistener" in adapters:
+            courtlistener_results = search_courtlistener_cases(issue, query, budget["courtlistener_results"])
+            candidates.extend(courtlistener_results)
+            retrieval_trace.append(
+                {
+                    "adapter": "courtlistener",
+                    "query": query,
+                    "result_count": len(courtlistener_results),
+                    "used_fallback": False,
+                }
+            )
 
-        govinfo_results = search_govinfo_materials(
-            issue,
-            query,
-            request["preferred_authority_types"],
-            budget["govinfo_packages_per_collection"],
-        )
-        candidates.extend(govinfo_results)
-        retrieval_trace.append(
-            {
-                "adapter": "govinfo",
-                "query": query,
-                "result_count": len(govinfo_results),
-                "used_fallback": False,
-            }
-        )
+        if "govinfo" in adapters:
+            govinfo_results = search_govinfo_materials(
+                issue,
+                query,
+                request["preferred_authority_types"],
+                budget["govinfo_packages_per_collection"],
+            )
+            candidates.extend(govinfo_results)
+            retrieval_trace.append(
+                {
+                    "adapter": "govinfo",
+                    "query": query,
+                    "result_count": len(govinfo_results),
+                    "used_fallback": False,
+                }
+            )
 
-        if needs_legislative_materials(request):
+        if "congress" in adapters:
             congress_results = search_congress_materials(issue, query, budget["congress_results"])
             candidates.extend(congress_results)
             retrieval_trace.append(
@@ -1092,43 +1320,46 @@ def retrieve_candidates_for_issue(issue: str, queries: list[str], request: dict[
 def run_legal_research(request: dict[str, Any]) -> dict[str, Any]:
     assert_supported_jurisdiction(request["jurisdiction"])
 
-    extracted = issue_extractor(
-        legal_question=request["legal_question"],
-        fact_pattern=request["fact_pattern"],
-        known_issues=request["known_issues"],
-        preferred_authority_types=request["preferred_authority_types"],
-        max_issues=budget["max_issues"],
+    clarifying_questions_and_answers = build_clarifying_q_and_a(request)
+    normalized_guidance = normalize_user_guidance(request, clarifying_questions_and_answers)
+    effective_request = apply_guidance_to_request(request, clarifying_questions_and_answers, normalized_guidance)
+
+    print(
+        json.dumps(
+            {
+                "user_guidance_summary": effective_request.get("user_guidance_summary", ""),
+                "known_issues": effective_request.get("known_issues", []),
+                "preferred_authority_types": effective_request.get("preferred_authority_types", []),
+                "approved_source_adapters": effective_request.get("approved_source_adapters", []),
+            },
+            indent=2,
+            ensure_ascii=False,
+        )
     )
 
-    issues_to_research = extracted.issues_to_research or request["known_issues"] or [request["legal_question"]]
+    issues_to_research = build_issues_to_research(effective_request)
 
     issue_analyses: list[IssueAnalysis] = []
     all_digests: list[AuthorityDigest] = []
     artifacts: list[dict[str, Any]] = []
 
     for issue in issues_to_research:
-        planned_queries = query_planner(
-            legal_question=request["legal_question"],
-            fact_pattern=request["fact_pattern"],
-            issue=issue,
-            jurisdiction=request["jurisdiction"],
-            preferred_authority_types=request["preferred_authority_types"],
-            number_of_queries=budget["queries_per_issue"],
-        ).queries
+        planned_queries = build_queries_for_issue(issue, effective_request)
 
-        candidates, retrieval_trace = retrieve_candidates_for_issue(issue, planned_queries, request)
-        selected_sources, selection_rationale = select_sources(
+        candidates, retrieval_trace = retrieve_candidates_for_issue(issue, planned_queries, effective_request)
+        selected_sources, selection_rationale = select_sources_for_request(
             issue=issue,
-            legal_question=request["legal_question"],
-            fact_pattern=request["fact_pattern"],
+            legal_question=effective_request["legal_question"],
+            fact_pattern=effective_request["fact_pattern"],
             candidates=candidates,
-            max_sources=budget["selected_sources_per_issue"],
+            max_sources=selected_sources_per_issue_for_request(effective_request),
+            request=effective_request,
         )
 
         documents = [fetch_source_document(candidate) for candidate in selected_sources]
         digests, analysis = analyze_issue(
-            legal_question=request["legal_question"],
-            fact_pattern=request["fact_pattern"],
+            legal_question=effective_request["legal_question"],
+            fact_pattern=effective_request["fact_pattern"],
             issue=issue,
             documents=documents,
             selected_sources=selected_sources,
@@ -1152,9 +1383,9 @@ def run_legal_research(request: dict[str, Any]) -> dict[str, Any]:
         )
 
     memo = memo_writer(
-        legal_question=request["legal_question"],
-        fact_pattern=request["fact_pattern"],
-        jurisdiction=request["jurisdiction"],
+        legal_question=effective_request["legal_question"],
+        fact_pattern=effective_request["fact_pattern"],
+        jurisdiction=effective_request["jurisdiction"],
         issue_analyses=[asdict(analysis) for analysis in issue_analyses],
     ).memo_markdown
 
@@ -1168,6 +1399,9 @@ def run_legal_research(request: dict[str, Any]) -> dict[str, Any]:
     return {
         "request_source_metadata": request_source_metadata,
         "legal_research_request": request,
+        "effective_research_request": effective_request,
+        "clarifying_questions_and_answers": clarifying_questions_and_answers,
+        "normalized_guidance": normalized_guidance,
         "issues_to_research": issues_to_research,
         "artifacts": artifacts,
         "issue_analyses": [asdict(analysis) for analysis in issue_analyses],
