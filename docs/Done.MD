@@ -15,5 +15,6 @@ Re-starting this from March 2026
 - [Building Autonomous Vehicles That Reason with the NVIDIA Alpamayo Open Ecosystem](https://huggingface.co/blog/drmapavone/nvidia-alpamayo)
 - [Expanding the Alpamayo Open Platform for Developing Reasoning AVs Across Models, Data, and Simulation](https://huggingface.co/blog/drmapavone/nvidia-alpamayo-1-5)
 - [Welch labs VLA video](https://youtu.be/2mrGMMmrVNE?si=P7Q_I0FIwtuT3HbR) always a pleasure
+- [Guiding Action Diffusion Policies in Robots via Motion Tokens](https://villekuosmanen.medium.com/guiding-action-diffusion-policies-in-robots-via-motion-tokens-f8a5fe4ef8b1)
 
 
