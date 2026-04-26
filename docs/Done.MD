@@ -17,5 +17,6 @@ Re-starting this from March 2026
 - [Welch labs VLA video](https://youtu.be/2mrGMMmrVNE?si=P7Q_I0FIwtuT3HbR) always a pleasure
 - [Guiding Action Diffusion Policies in Robots via Motion Tokens](https://villekuosmanen.medium.com/guiding-action-diffusion-policies-in-robots-via-motion-tokens-f8a5fe4ef8b1)
 - [Pi0.7 summary](https://x.com/shreyasgite/status/2046184441152684203)
+- [Gr00T N1 article](https://medium.com/correll-lab/a-review-paper-gr00t-n1-an-open-foundation-model-for-generalist-humanoid-robots-nvidia-march-734c82c38e70)
 
 
