@@ -23,6 +23,7 @@ It is split by outcomes so it reads more like a technical growth plan than a boo
 - [Advanved RAG Course](https://www.youtube.com/watch?v=_kpxLkH5vY0)
 - [intro to MCP Servers](https://www.youtube.com/watch?v=DosHnyq78xY&t=114s)
 - [SSD make llm faster](https://arxiv.org/pdf/2603.03251)
+- [VLM4VLA](https://arxiv.org/pdf/2601.03309)
 
 ## Ideas
 
