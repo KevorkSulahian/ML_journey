@@ -204,6 +204,7 @@ class SourceCandidate:
     date: Optional[str] = None
     package_id: Optional[str] = None
     opinion_id: Optional[int] = None
+    court_id: Optional[str] = None
     is_fallback: bool = False
     notes: list[str] = field(default_factory=list)
 
@@ -377,12 +378,14 @@ def courtlistener_auth_headers() -> dict[str, str]:
     return {"Authorization": f"Token {COURTLISTENER_API_KEY}"}
 
 
-def search_courtlistener_cases(issue: str, query: str, limit: int) -> list[SourceCandidate]:
+def search_courtlistener_cases(issue: str, query: str, limit: int, court: Optional[str] = None) -> list[SourceCandidate]:
     params = {
         "q": query,
         "type": "o",
         "order_by": "score desc",
     }
+    if court:
+        params["court"] = court
     response = HTTP.get("https://www.courtlistener.com/api/rest/v4/search/", params=params, timeout=30)
     response.raise_for_status()
     payload = response.json()
@@ -410,7 +413,8 @@ def search_courtlistener_cases(issue: str, query: str, limit: int) -> list[Sourc
                 jurisdiction=result.get("court") or "United States (Federal)",
                 date=result.get("dateFiled"),
                 opinion_id=opinion_meta.get("id"),
-                notes=["CourtListener search result"],
+                court_id=result.get("court_id"),
+                notes=["CourtListener search result"] + ([f"court filter={court}"] if court else []),
             )
         )
 
@@ -992,6 +996,15 @@ def is_precedent_question(request: dict[str, Any]) -> bool:
     return "precedent" in question_lower or "stare decisis" in question_lower
 
 
+def prefers_landmark_scotus_cases(request: dict[str, Any]) -> bool:
+    if not is_precedent_question(request):
+        return False
+    guidance = (request.get("user_guidance_summary") or "").lower()
+    if any(token in guidance for token in ["supreme court", "scotus", "landmark"]):
+        return True
+    return True
+
+
 def build_clarifying_q_and_a(request: dict[str, Any]) -> list[dict[str, str]]:
     results = clarifier(
         legal_question=request["legal_question"],
@@ -1058,6 +1071,8 @@ def max_issues_for_request(request: dict[str, Any]) -> int:
 
 
 def queries_per_issue_for_request(request: dict[str, Any]) -> int:
+    if is_lexam_request(request) and is_precedent_question(request):
+        return 3
     if is_lexam_request(request):
         return 2
     return budget["queries_per_issue"]
@@ -1089,6 +1104,31 @@ def candidate_relevance_score(candidate: SourceCandidate, issue: str, legal_ques
     return query_score(f"{issue} {legal_question}", haystack)
 
 
+def candidate_rank_for_request(candidate: SourceCandidate, issue: str, legal_question: str, request: dict[str, Any]) -> tuple:
+    scotus_boost = 0
+    title = candidate.title.lower()
+    if prefers_landmark_scotus_cases(request):
+        if candidate.court_id == "scotus":
+            scotus_boost = 100
+        elif "supreme court of the united states" in candidate.jurisdiction.lower():
+            scotus_boost = 100
+
+    landmark_terms = [
+        "wickard v. filburn",
+        "national federation of independent business v. sebelius",
+        "brown v. board",
+        "dobbs v. jackson",
+        "roe v. wade",
+        "planned parenthood v. casey",
+    ]
+    landmark_boost = sum(15 for term in landmark_terms if term in title)
+
+    return (
+        scotus_boost + landmark_boost + candidate_relevance_score(candidate, issue, legal_question),
+        authority_priority(candidate),
+    )
+
+
 def select_sources_for_request(
     issue: str,
     legal_question: str,
@@ -1102,7 +1142,7 @@ def select_sources_for_request(
 
     ordered_candidates = sorted(
         dedupe_candidates(candidates),
-        key=lambda candidate: (candidate_relevance_score(candidate, issue, legal_question), authority_priority(candidate)),
+        key=lambda candidate: candidate_rank_for_request(candidate, issue, legal_question, request),
         reverse=True,
     )
 
@@ -1145,8 +1185,9 @@ def build_issues_to_research(request: dict[str, Any]) -> list[str]:
 def build_queries_for_issue(issue: str, request: dict[str, Any]) -> list[str]:
     if is_lexam_request(request) and is_precedent_question(request):
         return [
-            "stare decisis precedent follow distinguish overrule Supreme Court American law",
-            "precedent first impression distinguish overrule American law appellate cases",
+            "stare decisis Supreme Court precedent landmark cases",
+            "Wickard v. Filburn National Federation of Independent Business v. Sebelius Supreme Court precedent",
+            "Brown v. Board of Education Dobbs v. Jackson Women's Health Organization Supreme Court overrule precedent",
         ][: queries_per_issue_for_request(request)]
 
     return query_planner(
@@ -1247,10 +1288,16 @@ def retrieve_candidates_for_issue(issue: str, queries: list[str], request: dict[
     candidates: list[SourceCandidate] = []
     retrieval_trace: list[dict[str, Any]] = []
     adapters = retrieval_adapters_for_request(request)
+    court_filter = "scotus" if prefers_landmark_scotus_cases(request) else None
 
     for query in queries:
         if "courtlistener" in adapters:
-            courtlistener_results = search_courtlistener_cases(issue, query, budget["courtlistener_results"])
+            courtlistener_results = search_courtlistener_cases(
+                issue,
+                query,
+                budget["courtlistener_results"],
+                court=court_filter,
+            )
             candidates.extend(courtlistener_results)
             retrieval_trace.append(
                 {
@@ -1258,6 +1305,7 @@ def retrieve_candidates_for_issue(issue: str, queries: list[str], request: dict[
                     "query": query,
                     "result_count": len(courtlistener_results),
                     "used_fallback": False,
+                    "court_filter": court_filter,
                 }
             )
 
