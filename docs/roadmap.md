@@ -98,6 +98,11 @@ Training LLMs on GPU Clusters](https://huggingface.co/spaces/nanotron/ultrascale
 
 - [Multimodality in Robotics. How to predict correct and diverse continuous robot actions](https://www.youtube.com/watch?v=6oZe_tKE3YA)
 
+### Distill
+- [on policy distill](https://huggingface.co/spaces/HuggingFaceH4/on-policy-distillation)
+- [on policy distill](https://thinkingmachines.ai/blog/on-policy-distillation/)
+- [big boi distill](https://huggingface.co/spaces/HuggingFaceTB/trl-distillation-trainer)
+
 
 ### Other
 - [🍷 FineWeb: decanting the web for the finest text data at scale](https://huggingface.co/spaces/HuggingFaceFW/blogpost-fineweb-v1) Learning to Create a Dataset.
