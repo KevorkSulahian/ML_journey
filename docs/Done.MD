@@ -20,3 +20,5 @@ Re-starting this from March 2026
 - [Gr00T N1 article](https://medium.com/correll-lab/a-review-paper-gr00t-n1-an-open-foundation-model-for-generalist-humanoid-robots-nvidia-march-734c82c38e70)
 
 
+## Failed stuff
+- Training a small model on HF with Codex
