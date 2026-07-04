@@ -6,6 +6,7 @@ Re-starting this from March 2026
 ### LLM
 
 - [Make LLM faster with Speculative Speculative decoding](https://youtu.be/4Ij9YOyrNdM?si=xJuxPy754qHlON-o)
+- [from base to reasoning models](https://pluralis.ai/blog/from-base-to-reasoning-model/)
 
 ### RL, Robots and VLA
 
