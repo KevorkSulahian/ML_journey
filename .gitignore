@@ -97,3 +97,4 @@ learning_materials/unsloth/nemo_sudoku/nemo_gym_sudoku_finetune_4bit
 learning_materials/unsloth/nemo_sudoku/outputs
 learning_materials/unsloth/nemo_sudoku/outputs_debug
 
+hf_runs/
