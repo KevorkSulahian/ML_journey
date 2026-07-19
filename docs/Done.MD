@@ -7,6 +7,7 @@ Re-starting this from March 2026
 
 - [Make LLM faster with Speculative Speculative decoding](https://youtu.be/4Ij9YOyrNdM?si=xJuxPy754qHlON-o)
 - [from base to reasoning models](https://pluralis.ai/blog/from-base-to-reasoning-model/)
+- [Periodic Labs: RL in the physical sciences ](https://agarwl.github.io/images/research/iclr_spot_talk_v2.pdf)
 
 ### RL, Robots and VLA
 
