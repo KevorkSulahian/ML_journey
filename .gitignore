@@ -98,3 +98,7 @@ learning_materials/unsloth/nemo_sudoku/outputs
 learning_materials/unsloth/nemo_sudoku/outputs_debug
 
 hf_runs/
+learning_materials/fine-tune paligemma/lightning_logs/version_0/*
+learning_materials/finetune_embedding/data/*
+learning_materials/finetune_embedding/adapters
+learning_materials/finetune_embedding/chromadb
